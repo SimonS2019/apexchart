@@ -5,11 +5,23 @@ import { NgApexchartsModule } from 'ng-apexcharts';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PieChartComponent } from './pie-chart/pie-chart.component';
+import { BoxPlotComponent } from './box-plot/box-plot.component';
+import { StakedHorizantalBarChartComponent } from './staked-horizantal-bar-chart/staked-horizantal-bar-chart.component';
+import { BubbleChartComponent } from './bubble-chart/bubble-chart.component';
+import { ScattterChartComponent } from './scattter-chart/scattter-chart.component';
+import { TimelineChartComponent } from './timeline-chart/timeline-chart.component';
+import { BoxplotScatterComponent } from './boxplot-scatter/boxplot-scatter.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PieChartComponent
+    PieChartComponent,
+    BoxPlotComponent,
+    StakedHorizantalBarChartComponent,
+    BubbleChartComponent,
+    ScattterChartComponent,
+    TimelineChartComponent,
+    BoxplotScatterComponent
   ],
   imports: [
     BrowserModule,
