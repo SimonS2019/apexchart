@@ -38,14 +38,17 @@ export class BubbleChartComponent{
       series: [
         {
           name: "Bubble1",
-              // symbol: "test2",
-          // holdings: 2200,
-          data: [[25, 25, 10],[25,50,20]]
-
+          data: this.generateData(new Date("11 Feb 2017 GMT").getTime(), 20, {
+            min: 10,
+            max: 60
+          })
         },
         {
           name: "Bubble2",
-          data: [[25, 25, 10],[50,50,20]]
+          data: this.generateData(new Date("11 Feb 2017 GMT").getTime(), 20, {
+            min: 10,
+            max: 60
+          })
         },
         {
           name: "Bubble3",
@@ -86,11 +89,6 @@ export class BubbleChartComponent{
   }
 
   public generateData(baseval: number, count: number, yrange: { min: any; max: any; }) {
-    // console.log(baseval);
-    // console.log(count);
-    // console.log(yrange.min);
-    // console.log(yrange.max);
-    
     var i = 0;
     var series = [];
     while (i < count) {
@@ -98,17 +96,11 @@ export class BubbleChartComponent{
       var y =
         Math.floor(Math.random() * (yrange.max - yrange.min + 1)) + yrange.min;
       var z = Math.floor(Math.random() * (75 - 15 + 1)) + 15;
-// console.log(x);
-// console.log(y);
-// console.log(z);
 
-      series.push([x, y, z]);
+      series.push({x:x, y:y, z:z});
       baseval += 86400000;
       i++;
     }
-    console.log(series);
-    
-    return [[25, 25, 10],[25,50,20]];
     return series;
   }
 }
