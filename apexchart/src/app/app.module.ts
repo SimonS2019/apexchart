@@ -11,6 +11,9 @@ import { BubbleChartComponent } from './bubble-chart/bubble-chart.component';
 import { ScattterChartComponent } from './scattter-chart/scattter-chart.component';
 import { TimelineChartComponent } from './timeline-chart/timeline-chart.component';
 import { BoxplotScatterComponent } from './boxplot-scatter/boxplot-scatter.component';
+import { BaseicBarChartComponent } from './baseic-bar-chart/baseic-bar-chart.component';
+import { StackedBarChartComponent } from './stacked-bar-chart/stacked-bar-chart.component';
+import { PercentageStackedBarChartComponent } from './percentage-stacked-bar-chart/percentage-stacked-bar-chart.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +24,10 @@ import { BoxplotScatterComponent } from './boxplot-scatter/boxplot-scatter.compo
     BubbleChartComponent,
     ScattterChartComponent,
     TimelineChartComponent,
-    BoxplotScatterComponent
+    BoxplotScatterComponent,
+    BaseicBarChartComponent,
+    StackedBarChartComponent,
+    PercentageStackedBarChartComponent
   ],
   imports: [
     BrowserModule,

@@ -121,7 +121,7 @@ xaxis: {
     formatter: function(val) {
       return new Date(val).getFullYear().toString()
     }
-  }
+  } 
 },
 tooltip: {
   shared: false,
