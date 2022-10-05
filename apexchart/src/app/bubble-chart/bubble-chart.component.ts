@@ -38,15 +38,14 @@ export class BubbleChartComponent{
       series: [
         {
           name: "Bubble1",
+              // symbol: "test2",
+          // holdings: 2200,
           data: [[25, 25, 10],[25,50,20]]
 
         },
         {
           name: "Bubble2",
-          data: this.generateData(new Date("11 Feb 2017 GMT").getTime(), 20, {
-            min: 10,
-            max: 60
-          })
+          data: [[25, 25, 10],[50,50,20]]
         },
         {
           name: "Bubble3",
@@ -103,12 +102,13 @@ export class BubbleChartComponent{
 // console.log(y);
 // console.log(z);
 
-      series.push(x, y, z);
+      series.push([x, y, z]);
       baseval += 86400000;
       i++;
     }
     console.log(series);
     
+    return [[25, 25, 10],[25,50,20]];
     return series;
   }
 }

@@ -14,6 +14,7 @@ import { BoxplotScatterComponent } from './boxplot-scatter/boxplot-scatter.compo
 import { BaseicBarChartComponent } from './baseic-bar-chart/baseic-bar-chart.component';
 import { StackedBarChartComponent } from './stacked-bar-chart/stacked-bar-chart.component';
 import { PercentageStackedBarChartComponent } from './percentage-stacked-bar-chart/percentage-stacked-bar-chart.component';
+import { ScatterDatetimeComponent } from './scatter-datetime/scatter-datetime.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { PercentageStackedBarChartComponent } from './percentage-stacked-bar-cha
     BoxplotScatterComponent,
     BaseicBarChartComponent,
     StackedBarChartComponent,
-    PercentageStackedBarChartComponent
+    PercentageStackedBarChartComponent,
+    ScatterDatetimeComponent
   ],
   imports: [
     BrowserModule,

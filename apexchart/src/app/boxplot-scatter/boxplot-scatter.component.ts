@@ -141,6 +141,8 @@ tooltip: {
       baseval += 86400000;
       i++;
     }
+    console.log(series);
+    
     return series;
   }
 }
