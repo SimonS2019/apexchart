@@ -15,6 +15,11 @@ import { BaseicBarChartComponent } from './baseic-bar-chart/baseic-bar-chart.com
 import { StackedBarChartComponent } from './stacked-bar-chart/stacked-bar-chart.component';
 import { PercentageStackedBarChartComponent } from './percentage-stacked-bar-chart/percentage-stacked-bar-chart.component';
 import { ScatterDatetimeComponent } from './scatter-datetime/scatter-datetime.component';
+import { BasicTimelineComponent } from './basic-timeline/basic-timeline.component';
+import { DifferentColorForEachBarComponent } from './different-color-for-each-bar/different-color-for-each-bar.component';
+import { MultiSeriesTimelineComponent } from './multi-series-timeline/multi-series-timeline.component';
+import { AdvancedTimelineComponent } from './advanced-timeline/advanced-timeline.component';
+import { TimelineGroupRowsComponent } from './timeline-group-rows/timeline-group-rows.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +34,12 @@ import { ScatterDatetimeComponent } from './scatter-datetime/scatter-datetime.co
     BaseicBarChartComponent,
     StackedBarChartComponent,
     PercentageStackedBarChartComponent,
-    ScatterDatetimeComponent
+    ScatterDatetimeComponent,
+    BasicTimelineComponent,
+    DifferentColorForEachBarComponent,
+    MultiSeriesTimelineComponent,
+    AdvancedTimelineComponent,
+    TimelineGroupRowsComponent
   ],
   imports: [
     BrowserModule,
