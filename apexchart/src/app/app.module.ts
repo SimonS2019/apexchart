@@ -21,6 +21,7 @@ import { MultiSeriesTimelineComponent } from './multi-series-timeline/multi-seri
 import { AdvancedTimelineComponent } from './advanced-timeline/advanced-timeline.component';
 import { TimelineGroupRowsComponent } from './timeline-group-rows/timeline-group-rows.component';
 import { GroupBarChartComponent } from './group-bar-chart/group-bar-chart.component';
+import { BarReversedComponent } from './bar-reversed/bar-reversed.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { GroupBarChartComponent } from './group-bar-chart/group-bar-chart.compon
     MultiSeriesTimelineComponent,
     AdvancedTimelineComponent,
     TimelineGroupRowsComponent,
-    GroupBarChartComponent
+    GroupBarChartComponent,
+    BarReversedComponent
   ],
   imports: [
     BrowserModule,
