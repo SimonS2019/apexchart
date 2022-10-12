@@ -20,6 +20,7 @@ import { DifferentColorForEachBarComponent } from './different-color-for-each-ba
 import { MultiSeriesTimelineComponent } from './multi-series-timeline/multi-series-timeline.component';
 import { AdvancedTimelineComponent } from './advanced-timeline/advanced-timeline.component';
 import { TimelineGroupRowsComponent } from './timeline-group-rows/timeline-group-rows.component';
+import { GroupBarChartComponent } from './group-bar-chart/group-bar-chart.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { TimelineGroupRowsComponent } from './timeline-group-rows/timeline-group
     DifferentColorForEachBarComponent,
     MultiSeriesTimelineComponent,
     AdvancedTimelineComponent,
-    TimelineGroupRowsComponent
+    TimelineGroupRowsComponent,
+    GroupBarChartComponent
   ],
   imports: [
     BrowserModule,
