@@ -10,7 +10,8 @@ import {
   ApexDataLabels,
   ApexXAxis,
   ApexPlotOptions,
-  ApexGrid
+  ApexGrid,
+  ApexTitleSubtitle
 } from "ng-apexcharts";
 
 export type ChartOptions = {
@@ -22,6 +23,9 @@ export type ChartOptions = {
   annotations: any; //ApexAnnotations;
   grid: ApexGrid;
   yaxis: any; // ApexYAxis;
+  title: ApexTitleSubtitle;
+  subtitle: ApexTitleSubtitle;
+
 };
 
 @Component({
@@ -70,6 +74,13 @@ export class BarReversedComponent {
             }
           }
         ]
+      },title: {
+        text: "Custom DataLabels",
+        align: "center",
+        floating: true
+      },subtitle: {
+        text: "Category Names as DataLabels inside bars",
+        align: "center"
       },
       plotOptions: {
         bar: {
