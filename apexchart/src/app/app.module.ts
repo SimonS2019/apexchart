@@ -25,6 +25,7 @@ import { BarReversedComponent } from './bar-reversed/bar-reversed.component';
 import { CustomDatalablesComponent } from './custom-datalables/custom-datalables.component';
 import { PatternedBarComponent } from './patterned-bar/patterned-bar.component';
 import { BarWithMarkersComponent } from './bar-with-markers/bar-with-markers.component';
+import { BubbleThreedComponent } from './bubble-threed/bubble-threed.component';
 
 @NgModule({
   declarations: [
@@ -49,7 +50,8 @@ import { BarWithMarkersComponent } from './bar-with-markers/bar-with-markers.com
     BarReversedComponent,
     CustomDatalablesComponent,
     PatternedBarComponent,
-    BarWithMarkersComponent
+    BarWithMarkersComponent,
+    BubbleThreedComponent
   ],
   imports: [
     BrowserModule,
