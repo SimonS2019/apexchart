@@ -24,6 +24,7 @@ import { GroupBarChartComponent } from './group-bar-chart/group-bar-chart.compon
 import { BarReversedComponent } from './bar-reversed/bar-reversed.component';
 import { CustomDatalablesComponent } from './custom-datalables/custom-datalables.component';
 import { PatternedBarComponent } from './patterned-bar/patterned-bar.component';
+import { BarWithMarkersComponent } from './bar-with-markers/bar-with-markers.component';
 
 @NgModule({
   declarations: [
@@ -47,7 +48,8 @@ import { PatternedBarComponent } from './patterned-bar/patterned-bar.component';
     GroupBarChartComponent,
     BarReversedComponent,
     CustomDatalablesComponent,
-    PatternedBarComponent
+    PatternedBarComponent,
+    BarWithMarkersComponent
   ],
   imports: [
     BrowserModule,
