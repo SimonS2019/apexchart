@@ -26,6 +26,7 @@ import { CustomDatalablesComponent } from './custom-datalables/custom-datalables
 import { PatternedBarComponent } from './patterned-bar/patterned-bar.component';
 import { BarWithMarkersComponent } from './bar-with-markers/bar-with-markers.component';
 import { BubbleThreedComponent } from './bubble-threed/bubble-threed.component';
+import { HorizontalBoxplotchartComponent } from './horizontal-boxplotchart/horizontal-boxplotchart.component';
 
 @NgModule({
   declarations: [
@@ -51,7 +52,8 @@ import { BubbleThreedComponent } from './bubble-threed/bubble-threed.component';
     CustomDatalablesComponent,
     PatternedBarComponent,
     BarWithMarkersComponent,
-    BubbleThreedComponent
+    BubbleThreedComponent,
+    HorizontalBoxplotchartComponent
   ],
   imports: [
     BrowserModule,
