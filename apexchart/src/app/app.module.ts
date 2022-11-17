@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { NgApexchartsModule } from 'ng-apexcharts';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -27,6 +26,7 @@ import { PatternedBarComponent } from './patterned-bar/patterned-bar.component';
 import { BarWithMarkersComponent } from './bar-with-markers/bar-with-markers.component';
 import { BubbleThreedComponent } from './bubble-threed/bubble-threed.component';
 import { HorizontalBoxplotchartComponent } from './horizontal-boxplotchart/horizontal-boxplotchart.component';
+import { NgApexchartsModule } from 'ng-apexcharts';
 
 @NgModule({
   declarations: [
