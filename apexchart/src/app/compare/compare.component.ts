@@ -1,6 +1,5 @@
 
 
-
 import { Component, ViewChild } from "@angular/core";
 import * as moment from "moment";
 
@@ -26,13 +25,12 @@ export type ChartOptions = {
   xaxis: ApexXAxis;
   plotOptions: ApexPlotOptions;
 };
-
 @Component({
-  selector: 'app-different-color-for-each-bar',
-  templateUrl: './different-color-for-each-bar.component.html',
-  styleUrls: ['./different-color-for-each-bar.component.css']
+  selector: 'app-compare',
+  templateUrl: './compare.component.html',
+  styleUrls: ['./compare.component.css']
 })
-export class DifferentColorForEachBarComponent {
+export class CompareComponent  {
   @ViewChild('chart', { static: false }) chart: any;
   public chartOptions: ChartOptions;
 
@@ -87,6 +85,29 @@ export class DifferentColorForEachBarComponent {
       chart: {
         height: 350,
         type: "rangeBar",
+        animations: {
+          enabled: true,
+          easing: 'easeinout',
+          speed: 1800,
+          //Gradually animate one by one every data in the series instead of animating all at once
+          animateGradually: {
+              enabled: true,
+              delay: 150
+          },
+          //Animate the chart when data is changed and chart is re-rendered.
+          dynamicAnimation: {
+              enabled: true,
+              speed: 350
+          }
+      },
+      background: '#fff',
+      // background: '#0057e3'
+       brush: {
+        enabled: false,
+        target: undefined,
+        autoScaleYaxis: false
+      }
+
       },
       plotOptions: {
         bar: {

@@ -27,6 +27,7 @@ import { BarWithMarkersComponent } from './bar-with-markers/bar-with-markers.com
 import { BubbleThreedComponent } from './bubble-threed/bubble-threed.component';
 import { HorizontalBoxplotchartComponent } from './horizontal-boxplotchart/horizontal-boxplotchart.component';
 import { NgApexchartsModule } from 'ng-apexcharts';
+import { CompareComponent } from './compare/compare.component';
 
 @NgModule({
   declarations: [
@@ -53,7 +54,8 @@ import { NgApexchartsModule } from 'ng-apexcharts';
     PatternedBarComponent,
     BarWithMarkersComponent,
     BubbleThreedComponent,
-    HorizontalBoxplotchartComponent
+    HorizontalBoxplotchartComponent,
+    CompareComponent
   ],
   imports: [
     BrowserModule,
