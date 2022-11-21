@@ -100,8 +100,8 @@ export class CompareComponent  {
               speed: 350
           }
       },
-      background: '#fff',
-      // background: '#0057e3'
+      // background: '#fff',
+      background: '#c9c9c9',
        brush: {
         enabled: false,
         target: undefined,
