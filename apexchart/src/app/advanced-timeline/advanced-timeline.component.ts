@@ -178,5 +178,9 @@ export class AdvancedTimelineComponent  {
         horizontalAlign: "left"
       }
     };
+    setTimeout(() => {
+      console.log(JSON.stringify(this.chartOptions));
+      
+    }, 900);
   }
 }

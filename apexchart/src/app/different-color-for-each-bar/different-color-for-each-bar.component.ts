@@ -13,7 +13,8 @@ import {
   ApexFill,
   ApexDataLabels,
   ApexYAxis,
-  ApexGrid
+  ApexGrid,
+  ApexLegend
 } from "ng-apexcharts";
 
 export type ChartOptions = {
@@ -25,6 +26,8 @@ export type ChartOptions = {
   yaxis: ApexYAxis;
   xaxis: ApexXAxis;
   plotOptions: ApexPlotOptions;
+  legend?: ApexLegend;
+
 };
 
 @Component({
@@ -44,42 +47,49 @@ export class DifferentColorForEachBarComponent {
             {
               x: "Analysis",
               y: [
-                new Date("2019-02-27").getTime(),
-                new Date("2019-03-04").getTime()
+                1551225600000,
+                1551657600000
               ],
               fillColor: "#008FFB"
             },
             {
               x: "Design",
               y: [
-                new Date("2019-03-04").getTime(),
-                new Date("2019-03-08").getTime()
+                1551657600000,
+                1552003200000
               ],
               fillColor: "#00E396"
             },
             {
               x: "Coding",
               y: [
-                new Date("2019-03-07").getTime(),
-                new Date("2019-03-10").getTime()
+                1551916800000,
+                1552176000000
               ],
               fillColor: "#775DD0"
             },
             {
               x: "Testing",
               y: [
-                new Date("2019-03-08").getTime(),
-                new Date("2019-03-12").getTime()
+                1552003200000,
+                1552348800000
               ],
               fillColor: "#FEB019"
             },
             {
               x: "Deployment",
               y: [
-                new Date("2019-03-12").getTime(),
-                new Date("2019-03-17").getTime()
+                1552348800000,
+                1552780800000
               ],
               fillColor: "#FF4560"
+            }, {
+              x: "Analysis",
+              y: [
+                1552348800000,
+                1552780800000
+              ],
+              fillColor: "#008FFB"
             }
           ]
         }
@@ -98,7 +108,7 @@ export class DifferentColorForEachBarComponent {
         }
       },
       dataLabels: {
-        enabled: true,
+        enabled: false,
         formatter: function (val, opts) {
           var label = opts.w.globals.labels[opts.dataPointIndex];
           // var a = moment(val[0]);
@@ -128,8 +138,12 @@ export class DifferentColorForEachBarComponent {
           return "";
         },
         style: {
-          colors: ["#f3f4f5", "#fff"]
-        }
+          fontSize: '14px',
+          fontFamily: 'Helvetica, Arial, sans-serif',
+          fontWeight: 'bold',
+          colors: ["red"]
+      },
+
       },
       xaxis: {
         type: "datetime"
@@ -139,7 +153,7 @@ export class DifferentColorForEachBarComponent {
       },
       grid: {
         row: {
-          colors: ["#f3f4f5", "#fff"],
+          colors: ["#f3f4f5", "#fff",],
           opacity: 1
         }
       },
@@ -147,6 +161,10 @@ export class DifferentColorForEachBarComponent {
         opacity: 1
       },
     };
+    setTimeout(() => {
+      console.log(JSON.stringify(this.chartOptions));
+      
+    }, 100);
   }
 }
 

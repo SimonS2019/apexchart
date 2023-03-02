@@ -122,9 +122,29 @@ export type ChartOptions = {
         type: "datetime"
       },
       legend: {
-        position: "top"
+        position: "top",
+      //   labels: {
+      //     colors: ['#eb4034','#453938'],
+      //     useSeriesColors: false
+      // },
+      markers: {
+        width: 12,
+        height: 12,
+        strokeWidth: 0,
+        strokeColor: '#fff',
+        fillColors: ['#eb4034','#453938'],
+        radius: 12,
+        customHTML: undefined,
+        onClick: undefined,
+        offsetX: 0,
+        offsetY: 0
+    },
       }
     };
+    setTimeout(() => {
+      console.log(JSON.stringify(this.chartOptions));
+      
+    }, 150);
   }
 }
 

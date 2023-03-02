@@ -28,6 +28,10 @@ import { BubbleThreedComponent } from './bubble-threed/bubble-threed.component';
 import { HorizontalBoxplotchartComponent } from './horizontal-boxplotchart/horizontal-boxplotchart.component';
 import { NgApexchartsModule } from 'ng-apexcharts';
 import { CompareComponent } from './compare/compare.component';
+import { LineColumnComponent } from './line-column/line-column.component';
+import { MutipleYAxisComponent } from './mutiple-y-axis/mutiple-y-axis.component';
+import { LineAreaComponent } from './line-area/line-area.component';
+import { LineColumnAreaComponent } from './line-column-area/line-column-area.component';
 
 @NgModule({
   declarations: [
@@ -55,7 +59,11 @@ import { CompareComponent } from './compare/compare.component';
     BarWithMarkersComponent,
     BubbleThreedComponent,
     HorizontalBoxplotchartComponent,
-    CompareComponent
+    CompareComponent,
+    LineColumnComponent,
+    MutipleYAxisComponent,
+    LineAreaComponent,
+    LineColumnAreaComponent
   ],
   imports: [
     BrowserModule,
