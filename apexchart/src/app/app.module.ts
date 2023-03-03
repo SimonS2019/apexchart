@@ -32,6 +32,7 @@ import { LineColumnComponent } from './line-column/line-column.component';
 import { MutipleYAxisComponent } from './mutiple-y-axis/mutiple-y-axis.component';
 import { LineAreaComponent } from './line-area/line-area.component';
 import { LineColumnAreaComponent } from './line-column-area/line-column-area.component';
+import { MixedChartTest1Component } from './mixed-chart-test1/mixed-chart-test1.component';
 
 @NgModule({
   declarations: [
@@ -63,7 +64,8 @@ import { LineColumnAreaComponent } from './line-column-area/line-column-area.com
     LineColumnComponent,
     MutipleYAxisComponent,
     LineAreaComponent,
-    LineColumnAreaComponent
+    LineColumnAreaComponent,
+    MixedChartTest1Component
   ],
   imports: [
     BrowserModule,
