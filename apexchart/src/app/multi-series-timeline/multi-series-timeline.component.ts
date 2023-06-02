@@ -11,16 +11,26 @@ import {
   ApexPlotOptions,
   ApexXAxis,
   ApexDataLabels,
-  ApexLegend
+  ApexLegend,
+  ApexYAxis,
+  ApexFill,
+  ApexGrid,
+  ApexTooltip
 } from "ng-apexcharts";
 
 export type ChartOptions = {
   series: ApexAxisChartSeries;
   chart: ApexChart;
+  fill: ApexFill;
   dataLabels: ApexDataLabels;
-  legend: ApexLegend;
+  grid: ApexGrid;
+  yaxis: ApexYAxis;
   xaxis: ApexXAxis;
   plotOptions: ApexPlotOptions;
+  legend: ApexLegend;
+  tooltip: ApexTooltip;
+  colors: string[];
+
 };
 
 @Component({
@@ -36,16 +46,11 @@ export type ChartOptions = {
   constructor() {
     this.chartOptions = {
       series: [
+        
         {
-          name: "Bob",
+          name: "On",
           data: [
-            {
-              x: "Design",
-              y: [
-                new Date("2019-03-05").getTime(),
-                new Date("2019-03-08").getTime()
-              ]
-            },
+           
             {
               x: "Code",
               y: [
@@ -57,33 +62,34 @@ export type ChartOptions = {
               x: "Test",
               y: [
                 new Date("2019-03-11").getTime(),
-                new Date("2019-03-16").getTime()
+                new Date("2019-03-13").getTime()
               ]
             }
           ]
         },
         {
-          name: "Joe",
+          name: "Off",
           data: [
-            {
-              x: "Design",
-              y: [
-                new Date("2019-03-02").getTime(),
-                new Date("2019-03-05").getTime()
-              ]
-            },
+           
             {
               x: "Code",
               y: [
-                new Date("2019-03-06").getTime(),
-                new Date("2019-03-09").getTime()
+                new Date("2019-03-08").getTime(),
+                new Date("2019-03-01").getTime()
               ]
             },
             {
               x: "Test",
               y: [
-                new Date("2019-03-10").getTime(),
-                new Date("2019-03-19").getTime()
+                new Date("2019-03-13").getTime(),
+                new Date("2019-03-15").getTime()
+              ]
+            },
+            {
+              x: "Test",
+              y: [
+                new Date("2019-03-18").getTime(),
+                new Date("2019-03-20").getTime()
               ]
             }
           ]
@@ -92,55 +98,51 @@ export type ChartOptions = {
       chart: {
         height: 350,
         type: "rangeBar"
-      },
-      plotOptions: {
-        bar: {
-          horizontal: true
-        }
-      },
-      dataLabels: {
-        enabled: true,
-        formatter: function(val) {
-          if (Array.isArray(val)) {
-
-            var a = moment(val[0])
-            var b = moment(val[1]) 
-            var diff = b.diff(a, "days");
-
-            // console.log(a);
-            // console.log(b);
-            // console.log(a.diff(b, 'days'));
-            return  diff + (diff > 1 ? " days" : " day");
-
-          }
-          ;
-
-          return "";
-        }
-      },
-      xaxis: {
-        type: "datetime"
-      },
-      legend: {
-        position: "top",
-      //   labels: {
-      //     colors: ['#eb4034','#453938'],
-      //     useSeriesColors: false
-      // },
-      markers: {
-        width: 12,
-        height: 12,
-        strokeWidth: 0,
-        strokeColor: '#fff',
-        fillColors: ['#eb4034','#453938'],
-        radius: 12,
-        customHTML: undefined,
-        onClick: undefined,
-        offsetX: 0,
-        offsetY: 0
     },
-      }
-    };
+    plotOptions: {
+        bar: {
+            horizontal: true,
+            rangeBarGroupRows: true
+        }
+    },
+    dataLabels: {
+        enabled: false
+    },
+    xaxis: {
+        type: "datetime",
+    },
+    yaxis: {
+        show: true
+    },
+    legend: {
+        position: "top",
+        horizontalAlign: "left"
+    },
+    tooltip: {
+        enabled: true,
+        style: {
+            fontSize: '0',
+        },
+        x: {
+            show: true,
+            format: "HH:mm"
+        }
+    },
+    colors: [
+        "#283D51",
+        "#86AA3E",
+        "#4339C6"
+    ],
+      grid: {
+      row: {
+        colors: ['#f3f4f5', '#fff'],
+        opacity: 1,
+      },
+    },
+    fill: {
+      opacity: 1,
+    },
+}
     setTimeout(() => {
       console.log(JSON.stringify(this.chartOptions));
       
