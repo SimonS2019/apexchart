@@ -135,10 +135,10 @@ export class CompareComponent  {
             // var c =moment.duration(b.diff(a));
             var diff = b.diff(a, "days");
 
-            // console.log(a);
-            // console.log(b);
-            // // var diff = b.diff(a, "days");
-            // console.log(a.diff(b, 'days'));
+            console.log(a);
+            console.log(b);
+            // var diff = b.diff(a, "days");
+            console.log(a.diff(b, 'days'));
             return label + ": " + diff + (diff > 1 ? " days" : " day");
 
           }

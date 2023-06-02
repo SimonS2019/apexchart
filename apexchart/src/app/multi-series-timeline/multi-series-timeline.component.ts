@@ -107,9 +107,9 @@ export type ChartOptions = {
             var b = moment(val[1]) 
             var diff = b.diff(a, "days");
 
-            // console.log(a);
-            // console.log(b);
-            // console.log(a.diff(b, 'days'));
+            console.log(a);
+            console.log(b);
+            console.log(a.diff(b, 'days'));
             return  diff + (diff > 1 ? " days" : " day");
 
           }

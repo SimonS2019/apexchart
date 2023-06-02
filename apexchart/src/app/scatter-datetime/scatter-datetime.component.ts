@@ -132,7 +132,7 @@ export class ScatterDatetimeComponent {
       baseval += 86400000;
       i++;
     }
-    // console.log(series);
+    console.log(series);
     
     return series
     

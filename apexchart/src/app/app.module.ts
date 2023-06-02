@@ -33,7 +33,6 @@ import { MutipleYAxisComponent } from './mutiple-y-axis/mutiple-y-axis.component
 import { LineAreaComponent } from './line-area/line-area.component';
 import { LineColumnAreaComponent } from './line-column-area/line-column-area.component';
 import { MixedChartTest1Component } from './mixed-chart-test1/mixed-chart-test1.component';
-import { MixedChartTest2Component } from './mixed-chart-test2/mixed-chart-test2.component';
 
 @NgModule({
   declarations: [
@@ -66,8 +65,7 @@ import { MixedChartTest2Component } from './mixed-chart-test2/mixed-chart-test2.
     MutipleYAxisComponent,
     LineAreaComponent,
     LineColumnAreaComponent,
-    MixedChartTest1Component,
-    MixedChartTest2Component
+    MixedChartTest1Component
   ],
   imports: [
     BrowserModule,
