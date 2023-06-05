@@ -38,95 +38,76 @@ export class CompareComponent {
   public chartOptions: ChartOptions;
 
   constructor() {
-    this.chartOptions ={
+    this.chartOptions = {
       series: [
-          {
-              name: "OFF",
-              data: [
-                  {
-                      x: "Schedule",
-                      y: [
-                          1685059200000,
-                          1685346900000
-                      ],
-                  },
-                  {
-                      x: "Schedule",
-                      y: [
-                          1685350800000,
-                          1685372100000
-                      ],
-                  },
-                  {
-                      x: "Schedule",
-                      y: [
-                          1685374200000,
-                          1685433300000
-                      ],
-                  }
-              ]
-          },
-          {
-              name: "ON",
-              data: [
-                  {
-                      x: "Schedule",
-                      y: [
-                          1685692500000,
-                          1685696400000
-                      ],
-                  },
-                  {
-                      x: "Schedule",
-                      y: [
-                          1685606100000,
-                          1685610000000
-                      ],
-                  }
-              ]
-          }
+        {
+          name: 'ON',
+          data: [
+            {
+              x: 'Schedule',
+              y: [1685692500000, 1685696400000],
+            },
+            {
+              x: 'Schedule',
+              y: [1685606100000, 1685610000000],
+            },
+          ],
+        },
+        {
+          name: 'OFF',
+          data: [
+            {
+              x: 'Schedule',
+              y: [1685059200000, 1685346900000],
+            },
+            {
+              x: 'Schedule',
+              y: [1685350800000, 1685372100000],
+            },
+            {
+              x: 'Schedule',
+              y: [1685374200000, 1685433300000],
+            },
+          ],
+        },
       ],
       chart: {
-          height: 350,
-          type: "rangeBar"
+        height: 350,
+        type: 'rangeBar',
       },
       plotOptions: {
-          bar: {
-              horizontal: true,
-              rangeBarGroupRows: true
-          }
+        bar: {
+          horizontal: true,
+          rangeBarGroupRows: true,
+        },
       },
       dataLabels: {
-          enabled: false
+        enabled: false,
       },
       xaxis: {
-          type: "datetime",
-          max: 1685713098000,
-          min: 1685059200000
+        type: 'datetime',
+        max: 1685713098000,
+        min: 1685059200000,
       },
       yaxis: {
-          show: true
+        show: true,
       },
       legend: {
-          position: "top",
-          horizontalAlign: "left"
+        position: 'top',
+        horizontalAlign: 'left',
       },
       tooltip: {
-          enabled: true,
-          style: {
-              fontSize: '0',
-          },
-          x: {
-              show: true,
-              format: "HH:mm"
-          }
+        enabled: true,
+        style: {
+          fontSize: '0',
+        },
+        x: {
+          show: true,
+          format: 'HH:mm',
+        },
       },
-      colors: [
-          "#283D51",
-          "#86AA3E",
-          "#4339C6"
-      ],
-        grid: {
+      colors: ['#86AA3E', '#283D51', '#4339C6'],
+      grid: {
         row: {
           colors: ['#f3f4f5', '#fff'],
           opacity: 1,
@@ -135,7 +116,7 @@ export class CompareComponent {
       fill: {
         opacity: 1,
       },
-  }
+    };
 
     // this.chartOptions = {
     //   series: [
