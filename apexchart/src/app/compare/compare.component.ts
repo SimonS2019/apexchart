@@ -13,6 +13,7 @@ import {
   ApexGrid,
   ApexLegend,
   ApexTooltip,
+  ApexTheme,
 } from 'ng-apexcharts';
 
 export type ChartOptions = {
@@ -27,6 +28,7 @@ export type ChartOptions = {
   legend: ApexLegend;
   tooltip: ApexTooltip;
   colors: string[];
+  theme:ApexTheme
 };
 @Component({
   selector: 'app-compare',
@@ -88,9 +90,20 @@ export class CompareComponent {
         type: 'datetime',
         max: 1685713098000,
         min: 1685059200000,
+        labels: {
+          style: {
+            colors: '#ff0073', // Set the color for x-axis labels
+          },
+        },
       },
       yaxis: {
         show: true,
+        labels: {
+          style: {
+            colors: '#ff0073', // Set the color for y-axis labels
+          },
+        },
+        
       },
       legend: {
         position: 'top',
@@ -116,6 +129,19 @@ export class CompareComponent {
       fill: {
         opacity: 1,
       },
+      theme: {
+        mode: 'dark',
+        palette: 'palette2',
+        // If defined, it will overwrite globals.colors variable
+        monochrome: {
+          // monochrome allows you to select just 1 color and fill out the rest with light/dark shade (intensity can be selected)
+          enabled: true,
+          color: '#008FFB',
+          shadeTo: 'dark',
+          shadeIntensity: 0.65
+        }
+      }
+
     };
 
     // this.chartOptions = {

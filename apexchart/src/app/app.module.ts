@@ -34,6 +34,8 @@ import { LineAreaComponent } from './line-area/line-area.component';
 import { LineColumnAreaComponent } from './line-column-area/line-column-area.component';
 import { MixedChartTest1Component } from './mixed-chart-test1/mixed-chart-test1.component';
 import { MixedChartTest2Component } from './mixed-chart-test2/mixed-chart-test2.component';
+import { ThemeTestComponent } from './theme-test/theme-test.component';
+import { AnyTestComponent } from './any-test/any-test.component';
 
 @NgModule({
   declarations: [
@@ -67,7 +69,9 @@ import { MixedChartTest2Component } from './mixed-chart-test2/mixed-chart-test2.
     LineAreaComponent,
     LineColumnAreaComponent,
     MixedChartTest1Component,
-    MixedChartTest2Component
+    MixedChartTest2Component,
+    ThemeTestComponent,
+    AnyTestComponent
   ],
   imports: [
     BrowserModule,
