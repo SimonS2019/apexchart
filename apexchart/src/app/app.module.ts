@@ -38,6 +38,7 @@ import { ThemeTestComponent } from './theme-test/theme-test.component';
 import { AnyTestComponent } from './any-test/any-test.component';
 import { SimplePieComponent } from './_pie/simple-pie/simple-pie.component';
 import { SimpleDonutComponent } from './_donut/simple-donut/simple-donut.component';
+import { MonochromePieComponent } from './_pie/monochrome-pie/monochrome-pie.component';
 
 @NgModule({
   declarations: [
@@ -75,7 +76,8 @@ import { SimpleDonutComponent } from './_donut/simple-donut/simple-donut.compone
     ThemeTestComponent,
     AnyTestComponent,
     SimplePieComponent,
-    SimpleDonutComponent
+    SimpleDonutComponent,
+    MonochromePieComponent
   ],
   imports: [
     BrowserModule,
