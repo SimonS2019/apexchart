@@ -31,7 +31,7 @@ export class MonochromePieComponent {
     this.chartOptions = {
       series: [25, 15, 44, 55, 41, 17],
       chart: {
-        width: '100%',
+        width: '60%',
         type: 'pie',
       },
       labels: [
