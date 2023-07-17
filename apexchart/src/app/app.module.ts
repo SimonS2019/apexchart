@@ -41,6 +41,7 @@ import { SimpleDonutComponent } from './_donut/simple-donut/simple-donut.compone
 import { MonochromePieComponent } from './_pie/monochrome-pie/monochrome-pie.component';
 import { GradientDonutComponent } from './_donut/gradient-donut/gradient-donut.component';
 import { SemiDonutComponent } from './_donut/semi-donut/semi-donut.component';
+import { DonutWithPatternComponent } from './_donut/donut-with-pattern/donut-with-pattern.component';
 
 @NgModule({
   declarations: [
@@ -81,7 +82,8 @@ import { SemiDonutComponent } from './_donut/semi-donut/semi-donut.component';
     SimpleDonutComponent,
     MonochromePieComponent,
     GradientDonutComponent,
-    SemiDonutComponent
+    SemiDonutComponent,
+    DonutWithPatternComponent
   ],
   imports: [
     BrowserModule,
