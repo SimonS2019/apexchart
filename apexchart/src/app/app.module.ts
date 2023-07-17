@@ -36,6 +36,7 @@ import { MixedChartTest1Component } from './mixed-chart-test1/mixed-chart-test1.
 import { MixedChartTest2Component } from './mixed-chart-test2/mixed-chart-test2.component';
 import { ThemeTestComponent } from './theme-test/theme-test.component';
 import { AnyTestComponent } from './any-test/any-test.component';
+import { SimplePieComponent } from './_pie/simple-pie/simple-pie.component';
 
 @NgModule({
   declarations: [
@@ -71,7 +72,8 @@ import { AnyTestComponent } from './any-test/any-test.component';
     MixedChartTest1Component,
     MixedChartTest2Component,
     ThemeTestComponent,
-    AnyTestComponent
+    AnyTestComponent,
+    SimplePieComponent
   ],
   imports: [
     BrowserModule,
