@@ -51,7 +51,10 @@ export class DonutWithPatternComponent {
           left: 3,
           blur: 3,
           opacity: 0.2
-        }
+        },
+        sparkline: {
+          enabled: true,
+      }
       },
       stroke: {
         width: 0

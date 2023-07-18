@@ -44,6 +44,7 @@ import { SemiDonutComponent } from './_donut/semi-donut/semi-donut.component';
 import { DonutWithPatternComponent } from './_donut/donut-with-pattern/donut-with-pattern.component';
 import { PowerfulPieChartComponent } from './_pie/powerful-pie-chart/powerful-pie-chart.component';
 import { PowerfulDonutChartComponent } from './_donut/powerful-donut-chart/powerful-donut-chart.component';
+import { PowerfulPieChartCompareComponent } from './_pie/powerful-pie-chart-compare/powerful-pie-chart-compare.component';
 
 @NgModule({
   declarations: [
@@ -87,7 +88,8 @@ import { PowerfulDonutChartComponent } from './_donut/powerful-donut-chart/power
     SemiDonutComponent,
     DonutWithPatternComponent,
     PowerfulPieChartComponent,
-    PowerfulDonutChartComponent
+    PowerfulDonutChartComponent,
+    PowerfulPieChartCompareComponent
   ],
   imports: [
     BrowserModule,

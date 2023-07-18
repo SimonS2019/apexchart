@@ -61,11 +61,11 @@ export type ChartOptions = {
 };
 
 @Component({
-  selector: 'app-powerful-pie-chart',
-  templateUrl: './powerful-pie-chart.component.html',
-  styleUrls: ['./powerful-pie-chart.component.css'],
+  selector: 'app-powerful-pie-chart-compare',
+  templateUrl: './powerful-pie-chart-compare.component.html',
+  styleUrls: ['./powerful-pie-chart-compare.component.css']
 })
-export class PowerfulPieChartComponent {
+export class PowerfulPieChartCompareComponent {
   @ViewChild('chart', { static: false }) chart: any;
   public chartOptions: ChartOptions;
 
