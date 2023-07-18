@@ -42,6 +42,7 @@ import { MonochromePieComponent } from './_pie/monochrome-pie/monochrome-pie.com
 import { GradientDonutComponent } from './_donut/gradient-donut/gradient-donut.component';
 import { SemiDonutComponent } from './_donut/semi-donut/semi-donut.component';
 import { DonutWithPatternComponent } from './_donut/donut-with-pattern/donut-with-pattern.component';
+import { PowerfulPieChartComponent } from './_pie/powerful-pie-chart/powerful-pie-chart.component';
 
 @NgModule({
   declarations: [
@@ -83,7 +84,8 @@ import { DonutWithPatternComponent } from './_donut/donut-with-pattern/donut-wit
     MonochromePieComponent,
     GradientDonutComponent,
     SemiDonutComponent,
-    DonutWithPatternComponent
+    DonutWithPatternComponent,
+    PowerfulPieChartComponent
   ],
   imports: [
     BrowserModule,
