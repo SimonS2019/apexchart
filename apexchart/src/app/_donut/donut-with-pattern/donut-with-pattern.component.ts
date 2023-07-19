@@ -53,7 +53,7 @@ export class DonutWithPatternComponent {
           opacity: 0.2
         },
         sparkline: {
-          enabled: true,
+          enabled: false,
       }
       },
       stroke: {

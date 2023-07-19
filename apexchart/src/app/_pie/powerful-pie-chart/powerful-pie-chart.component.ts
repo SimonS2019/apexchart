@@ -39,13 +39,14 @@ export type ChartOptions = {
   // Both necessary, as above
 
   //Both Option
+  title: ApexTitleSubtitle; //order 1 
+
   dataLabels?: ApexDataLabels;
 
   //piechart needed as below
   responsive: ApexResponsive[];
   labels?: any;
   theme?: ApexTheme;
-  title?: ApexTitleSubtitle;
   //piechart needed as above
 
   //time line chart as follow: 
@@ -76,6 +77,20 @@ export class PowerfulPieChartComponent {
         width: 380,
         type: 'pie',
       },
+      title: {
+        text: "Shape Tech Pie",  //Need, NB: using an empty string will take up some space (5px height?), we can use undefined 
+        align: 'center', //Need, default is 'left', Possible Options: 'left', '', ''
+        // margin: 10, // No need, default ?, ready to use
+        // offsetX: 0, // No need, default is 0, ready to use
+        // offsetY: 0, // No need, default is 0, ready to use
+        floating: false,  // No need, default is false, ready to use
+        style: {
+          fontSize:  '18px', //Need,
+          fontWeight:  'bold',//Need, String | Number
+          // fontFamily:  undefined, // No need,
+          color:  '#263238' //Need,
+        },
+    },
       labels: ['Team A', 'Team B', 'Team C', 'Team D', 'Team E'],
       responsive: [
         {
