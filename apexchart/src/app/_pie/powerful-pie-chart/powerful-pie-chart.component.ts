@@ -39,8 +39,8 @@ export type ChartOptions = {
   // Both necessary, as above
 
   //Both Option
-  title: ApexTitleSubtitle; //order 1 
-
+  title: ApexTitleSubtitle; //order 1
+  subtitle: ApexTitleSubtitle;
   dataLabels?: ApexDataLabels;
 
   //piechart needed as below
@@ -49,7 +49,7 @@ export type ChartOptions = {
   theme?: ApexTheme;
   //piechart needed as above
 
-  //time line chart as follow: 
+  //time line chart as follow:
   // fill: ApexFill;
   // dataLabels?: ApexDataLabels;
   // grid?: ApexGrid;
@@ -78,19 +78,33 @@ export class PowerfulPieChartComponent {
         type: 'pie',
       },
       title: {
-        text: "Shape Tech Pie",  //Need, NB: using an empty string will take up some space (5px height?), we can use undefined 
+        text: 'This is a Title', //Need, NB: using an empty string will take up some space (5px height?), we can use undefined
         align: 'center', //Need, default is 'left', Possible Options: 'left', '', ''
         // margin: 10, // No need, default ?, ready to use
         // offsetX: 0, // No need, default is 0, ready to use
         // offsetY: 0, // No need, default is 0, ready to use
-        floating: false,  // No need, default is false, ready to use
+        // floating: false, // No need, default is false, ready to use
         style: {
-          fontSize:  '18px', //Need,
-          fontWeight:  'bold',//Need, String | Number
+          fontSize: '18px', //Need,
+          fontWeight: 'bold', //Need, String | Number
           // fontFamily:  undefined, // No need,
-          color:  '#263238' //Need,
+          color: '#263238', //Need,
         },
-    },
+      },
+      subtitle: {
+        text: 'This is a subtitle', //Need, NB: using an empty string will take up some space, we can use undefined
+        align: 'center', //Need, default is 'left', Possible Options: 'left', '', ''
+        // margin: 10, // No need, default ?, ready to use
+        // offsetX: 0, // No need, default is 0, ready to use
+        // offsetY: 0, // No need, default is 0, ready to use
+        // floating: false, // No need, default is false, ready to use
+        style: {
+          fontSize: '12px',
+          fontWeight: 'normal',
+          fontFamily: undefined,
+          color: '#9699a2',
+        },
+      },
       labels: ['Team A', 'Team B', 'Team C', 'Team D', 'Team E'],
       responsive: [
         {
@@ -108,8 +122,6 @@ export class PowerfulPieChartComponent {
     };
     setTimeout(() => {
       console.log(JSON.stringify(this.chartOptions));
-  
     }, 500);
   }
-
 }
