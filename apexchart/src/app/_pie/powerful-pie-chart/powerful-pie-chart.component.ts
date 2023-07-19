@@ -42,11 +42,11 @@ export type ChartOptions = {
   title: ApexTitleSubtitle; //order 1
   subtitle: ApexTitleSubtitle;
   dataLabels?: ApexDataLabels;
+  theme: ApexTheme;
 
   //piechart needed as below
   responsive: ApexResponsive[];
   labels?: any;
-  theme?: ApexTheme;
   //piechart needed as above
 
   //time line chart as follow:
@@ -105,7 +105,18 @@ export class PowerfulPieChartComponent {
           color: '#9699a2',
         },
       },
-      labels: ['Team A', 'Team B', 'Team C', 'Team D', 'Team E'],
+      theme: {
+        mode: 'light',   // Need? autocomplete by input? light || dark
+        palette: 'palette1', //Need, default is "palette1"
+        // palette1 to palette10  https://apexcharts.com/docs/options/theme/#
+        monochrome: {
+            enabled: false,  //Need, default is false
+            // color: '#255aee',  // Need default is #008ffb
+            shadeTo: 'light', // Need, default is light. Accepts either light or dark
+            shadeIntensity: 0  // What should be the intensity while generating shades Accepts from 0 to 1
+        },
+    },
+      labels: ['Team A12', 'Team B', 'Team C', 'Team D', 'Team E'],
       responsive: [
         {
           breakpoint: 480,
