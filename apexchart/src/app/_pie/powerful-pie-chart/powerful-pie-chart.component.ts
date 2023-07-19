@@ -6,6 +6,7 @@ import {
   ApexGrid,
   ApexLegend,
   ApexPlotOptions,
+  ApexStates,
   ApexStroke,
   ApexTooltip,
   ApexXAxis,
@@ -48,6 +49,7 @@ export type ChartOptions = {
   tooltip: ApexTooltip
   colors: any[];
   stroke: ApexStroke;
+  states: ApexStates;
 
   //piechart needed as below
   responsive: ApexResponsive[];
@@ -292,7 +294,28 @@ export class PowerfulPieChartComponent {
       // colors: undefined, //No need, Pie/ Donut need
       // width: 2,    //No need, Pie/ Donut need
       // dashArray: 0,  //No need, Pie/ Donut need
-  }
+  },
+  states: {   //not use it now
+    // normal: {
+    //     filter: {
+    //         type: 'none',
+    //         value: 0,
+    //     }
+    // },
+    // hover: {
+    //     filter: {
+    //         type: 'lighten',
+    //         value: 0.15,
+    //     }
+    // },
+    // active: {
+    //     allowMultipleDataPointsSelection: false,
+    //     filter: {
+    //         type: 'darken',
+    //         value: 0.35,
+    //     }
+    // },
+}
     };
     setTimeout(() => {
       console.log(JSON.stringify(this.chartOptions));
