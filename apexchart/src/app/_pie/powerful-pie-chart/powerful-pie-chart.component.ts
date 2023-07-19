@@ -45,7 +45,7 @@ export type ChartOptions = {
   theme: ApexTheme;
   legend: ApexLegend;
   tooltip: ApexTooltip
-
+  colors: any[];
   //piechart needed as below
   responsive: ApexResponsive[];
   labels?: any;
@@ -120,7 +120,7 @@ export class PowerfulPieChartComponent {
           shadeIntensity: 0, // What should be the intensity while generating shades Accepts from 0 to 1
         },
       },
-      labels: ['Team A', 'Team B', 'Team C', 'Team D', 'Team E'], // Need? but lua service to do this!
+      labels: ['Team A', 'Team B', 'Team C', 'Team D', 'Team E'], // Need? but use lua service to do this!
       //In Axis Charts (line / column), labels can be set instead of setting xaxis categories option. While, in pie/donut charts, each label corresponds to value in series array.
       responsive: [
         // No, we send the device type to lua, then lua can make a decision
@@ -274,13 +274,14 @@ export class PowerfulPieChartComponent {
 
         // fixed: {  
         ////No need, I don't know how to describe these property. You can have a try. It looks like an "idiot element". 
-        // // I think all charts would need to use these
+        // // I don't think all charts need to use these
         //     enabled: true,
         //     position: 'topRight',
         //     offsetX: 0,
         //     offsetY: 0,
         // },
-    }
+    },
+    colors: ['#2E93fA', '#66DA26', '#546E7A', '#E91E63', '#FF9800'] // // Need? but use lua service to do this! overwrite the theme.palette 
     };
     setTimeout(() => {
       console.log(JSON.stringify(this.chartOptions));
