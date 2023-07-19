@@ -41,9 +41,10 @@ export type ChartOptions = {
   //Both Option
   title: ApexTitleSubtitle; //order 1
   subtitle: ApexTitleSubtitle;
-  dataLabels?: ApexDataLabels;
+  dataLabels: ApexDataLabels;
   theme: ApexTheme;
   legend: ApexLegend;
+  tooltip: ApexTooltip
 
   //piechart needed as below
   responsive: ApexResponsive[];
@@ -184,6 +185,102 @@ export class PowerfulPieChartComponent {
         //   highlightDataSeries: true,  //No need,
         // },
       },
+      dataLabels: {
+        enabled: true,   //Need, default is true
+        // enabledOnSeries: undefined, //No need,
+        // formatter: function (val, opts) {
+        //     return val
+        // },
+        // textAnchor: 'middle',  //No need for pie and dunut chart,
+        // distributed: false, //No need 
+        // offsetX: 0, //No need 
+        // offsetY: 0,//No need 
+        style: {
+            fontSize: '14px', //Need, default is 12px
+            // fontFamily: 'Helvetica, Arial, sans-serif',//No need 
+            fontWeight: 'bold', //Need
+            // colors: undefined //No need for pie and dunut chart, because we use 'foreColor'
+        },
+        background: {
+          enabled: true,  //Need, default is false
+          foreColor: '#fff', //Need
+          padding: 4,//Need
+          borderRadius: 2,//Need
+          borderWidth: 3,//Need
+          borderColor: 'black',//Need
+          opacity: 0.8,//Need
+          // dropShadow: { //No need 
+          //   enabled: false,
+          //   top: 1,
+          //   left: 1,
+          //   blur: 1,
+          //   color: '#000',
+          //   opacity: 0.45
+          // }
+        },
+        // dropShadow: {//No need 
+        //     enabled: false,
+        //     top: 1,
+        //     left: 1,
+        //     blur: 1,
+        //     color: '#000',
+        //     opacity: 0.45
+        // }
+      },
+      tooltip: {
+        enabled: true, //Need, default is true
+        // enabledOnSeries: undefined, //No need 
+        // shared: true, //No need 
+        followCursor: false,//No need,Pie chart does not work, some others is work
+        // intersect: false,  // No need, Pie chart will cause some error !!
+        // inverseOrder: false,  //No need 
+        // custom: undefined,  //No need 
+        fillSeriesColor: false, //Need, default is true , When enabled, fill the tooltip background with the corresponding series color
+        theme: 'dark', //Need, default is dark.
+        // Might be a good idea to go against the Apex theme?? Accepts either light or dark
+
+        style: {
+          fontSize: '12px', //Need, default is 12px
+          // fontFamily: undefined //No need 
+        },
+
+        // onDatasetHover: {
+        //     highlightDataSeries: false, //No need, seem does not work in pie chart
+        // },
+
+        // x: { //No need, seem does not work in pie chart
+        //     show: true,
+        //     format: 'dd MMM',
+        //     formatter: undefined,
+        // },
+        // y: {//No need, seem does not work in pie chart
+        //     formatter: undefined,
+        //     title: {
+        //         formatter: (seriesName) => seriesName,
+        //     },
+        // },
+        // z: { //No need, seem does not work in pie chart
+        //     formatter: undefined,
+        //     title: 'Size: '
+        // },
+
+        marker: {
+            show: true,  //Need, default is true
+        },
+
+        // items: {  //No need, seem does not work in pie chart
+        //    display: "flex",  
+        // },
+
+        // fixed: {  
+        ////No need, I don't know how to describe these property. You can have a try. It looks like an "idiot element". 
+        // // I think all charts would need to use these
+        //     enabled: true,
+        //     position: 'topRight',
+        //     offsetX: 0,
+        //     offsetY: 0,
+        // },
+    }
     };
     setTimeout(() => {
       console.log(JSON.stringify(this.chartOptions));
