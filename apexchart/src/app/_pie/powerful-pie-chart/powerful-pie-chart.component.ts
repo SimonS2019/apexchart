@@ -6,6 +6,7 @@ import {
   ApexGrid,
   ApexLegend,
   ApexPlotOptions,
+  ApexStroke,
   ApexTooltip,
   ApexXAxis,
   ApexYAxis,
@@ -46,6 +47,8 @@ export type ChartOptions = {
   legend: ApexLegend;
   tooltip: ApexTooltip
   colors: any[];
+  stroke: ApexStroke;
+
   //piechart needed as below
   responsive: ApexResponsive[];
   labels?: any;
@@ -281,7 +284,15 @@ export class PowerfulPieChartComponent {
         //     offsetY: 0,
         // },
     },
-    colors: ['#2E93fA', '#66DA26', '#546E7A', '#E91E63', '#FF9800'] // // Need? but use lua service to do this! overwrite the theme.palette 
+    colors: ['#2E93fA', '#66DA26', '#546E7A', '#E91E63', '#FF9800'], // // Need? but use lua service to do this! overwrite the theme.palette 
+    stroke: {
+      show: true, //Need, default is true
+      // curve: 'smooth',  //No need, Pie/ Donut no work
+      // lineCap: 'butt', //No need, Pie/ Donut no work
+      // colors: undefined, //No need, Pie/ Donut need
+      // width: 2,    //No need, Pie/ Donut need
+      // dashArray: 0,  //No need, Pie/ Donut need
+  }
     };
     setTimeout(() => {
       console.log(JSON.stringify(this.chartOptions));
