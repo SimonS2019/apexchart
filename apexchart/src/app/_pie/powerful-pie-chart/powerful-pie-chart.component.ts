@@ -46,11 +46,12 @@ export type ChartOptions = {
   dataLabels: ApexDataLabels;
   theme: ApexTheme;
   legend: ApexLegend;
-  tooltip: ApexTooltip
+  tooltip: ApexTooltip;
   colors: any[];
   stroke: ApexStroke;
   states: ApexStates;
   grid: ApexGrid;
+  fill: ApexFill;
 
   //piechart needed as below
   responsive: ApexResponsive[];
@@ -119,6 +120,7 @@ export class PowerfulPieChartComponent {
         mode: 'light', // Need? but automatic!  light || dark
         palette: 'palette1', //Need, default is "palette1"
         // palette1 to palette10  https://apexcharts.com/docs/options/theme/#
+        // // May confuse theme.palette, colors, fill.color
         monochrome: {
           enabled: false, //Need, default is false
           // color: '#255aee',  // Need default is #008ffb
@@ -159,7 +161,7 @@ export class PowerfulPieChartComponent {
         // formatter: undefined,//No need,
         // inverseOrder: false,//No need,
         width: undefined, //Need, undefined is means auto?
-        height: undefined,//Need , undefined is means auto?
+        height: undefined, //Need , undefined is means auto?
         // tooltipHoverFormatter: undefined,  //No need,
         // customLegendItems: [], //No need,
         // offsetX: 0, //No need,
@@ -192,30 +194,30 @@ export class PowerfulPieChartComponent {
         // },
       },
       dataLabels: {
-        enabled: true,   //Need, default is true
+        enabled: true, //Need, default is true
         // enabledOnSeries: undefined, //No need,
         // formatter: function (val, opts) {
         //     return val
         // },
         // textAnchor: 'middle',  //No need for pie and dunut chart,
-        // distributed: false, //No need 
-        // offsetX: 0, //No need 
-        // offsetY: 0,//No need 
+        // distributed: false, //No need
+        // offsetX: 0, //No need
+        // offsetY: 0,//No need
         style: {
-            fontSize: '14px', //Need, default is 12px
-            // fontFamily: 'Helvetica, Arial, sans-serif',//No need 
-            fontWeight: 'bold', //Need
-            // colors: undefined //No need for pie and dunut chart, because we use 'foreColor'
+          fontSize: '14px', //Need, default is 12px
+          // fontFamily: 'Helvetica, Arial, sans-serif',//No need
+          fontWeight: 'bold', //Need
+          // colors: undefined //No need for pie and dunut chart, because we use 'foreColor'
         },
         background: {
-          enabled: true,  //Need, default is false
+          enabled: true, //Need, default is false
           foreColor: '#fff', //Need
-          padding: 4,//Need
-          borderRadius: 2,//Need
-          borderWidth: 3,//Need
-          borderColor: 'black',//Need
-          opacity: 0.8,//Need
-          // dropShadow: { //No need 
+          padding: 4, //Need
+          borderRadius: 2, //Need
+          borderWidth: 3, //Need
+          borderColor: 'black', //Need
+          opacity: 0.8, //Need
+          // dropShadow: { //No need
           //   enabled: false,
           //   top: 1,
           //   left: 1,
@@ -224,7 +226,7 @@ export class PowerfulPieChartComponent {
           //   opacity: 0.45
           // }
         },
-        // dropShadow: {//No need 
+        // dropShadow: {//No need
         //     enabled: false,
         //     top: 1,
         //     left: 1,
@@ -235,19 +237,19 @@ export class PowerfulPieChartComponent {
       },
       tooltip: {
         enabled: true, //Need, default is true
-        // enabledOnSeries: undefined, //No need 
-        // shared: true, //No need 
-        followCursor: false,//No need,Pie chart does not work, some others is work
+        // enabledOnSeries: undefined, //No need
+        // shared: true, //No need
+        followCursor: false, //No need,Pie chart does not work, some others is work
         // intersect: false,  // No need, Pie chart will cause some error !!
-        // inverseOrder: false,  //No need 
-        // custom: undefined,  //No need 
+        // inverseOrder: false,  //No need
+        // custom: undefined,  //No need
         fillSeriesColor: false, //Need, default is true , When enabled, fill the tooltip background with the corresponding series color
         theme: 'dark', //Need, default is dark.
         // Might be a good idea to go against the Apex theme?? Accepts either light or dark
 
         style: {
           fontSize: '12px', //Need, default is 12px
-          // fontFamily: undefined //No need 
+          // fontFamily: undefined //No need
         },
 
         // onDatasetHover: {
@@ -271,83 +273,115 @@ export class PowerfulPieChartComponent {
         // },
 
         marker: {
-            show: true,  //Need, default is true
+          show: true, //Need, default is true
         },
 
         // items: {  //No need, seem does not work in pie chart
-        //    display: "flex",  
+        //    display: "flex",
         // },
 
-        // fixed: {  
-        ////No need, I don't know how to describe these property. You can have a try. It looks like an "idiot element". 
+        // fixed: {
+        ////No need, I don't know how to describe these property. You can have a try. It looks like an "idiot element".
         // // I don't think all charts need to use these
         //     enabled: true,
         //     position: 'topRight',
         //     offsetX: 0,
         //     offsetY: 0,
         // },
-    },
-    colors: ['#2E93fA', '#66DA26', '#546E7A', '#E91E63', '#FF9800'], // // Need? but use lua service to do this! overwrite the theme.palette 
-    stroke: {
-      show: true, //Need, default is true
-      // curve: 'smooth',  //No need, Pie/ Donut no work
-      // lineCap: 'butt', //No need, Pie/ Donut no work
-      // colors: undefined, //No need, Pie/ Donut need
-      // width: 2,    //No need, Pie/ Donut need
-      // dashArray: 0,  //No need, Pie/ Donut need
-  },
-  states: {   //not use it now
-    // normal: {
-    //     filter: {
-    //         type: 'none',
-    //         value: 0,
-    //     }
-    // },
-    // hover: {
-    //     filter: {
-    //         type: 'lighten',
-    //         value: 0.15,
-    //     }
-    // },
-    // active: {
-    //     allowMultipleDataPointsSelection: false,
-    //     filter: {
-    //         type: 'darken',
-    //         value: 0.35,
-    //     }
-    // },
-},
-grid: {
-  //not use it now
-  // show: true,
-  // borderColor: '#90A4AE',
-  // strokeDashArray: 0,
-  // position: 'back',
-  // xaxis: {
-  //     lines: {
-  //         show: false
-  //     }
-  // },   
-  // yaxis: {
-  //     lines: {
-  //         show: false
-  //     }
-  // },  
-  // row: {
-  //     colors: undefined,
-  //     opacity: 0.5
-  // },  
-  // column: {
-  //     colors: undefined,
-  //     opacity: 0.5
-  // },  
-  // padding: {
-  //     top: 0,
-  //     right: 0,
-  //     bottom: 0,
-  //     left: 0
-  // },  
-}
+      },
+      colors: ['#2E93fA', '#66DA26', '#546E7A', '#E91E63', '#FF9800'],
+      // // Need? but use lua service to do this! overwrite the theme.palette
+      // // May confuse theme.palette, colors, fill.color
+      stroke: {
+        show: true, //Need, default is true
+        // curve: 'smooth',  //No need, Pie/ Donut no work
+        // lineCap: 'butt', //No need, Pie/ Donut no work
+        // colors: undefined, //No need, Pie/ Donut need
+        // width: 2,    //No need, Pie/ Donut need
+        // dashArray: 0,  //No need, Pie/ Donut need
+      },
+      states: {
+        //not use it now
+        // normal: {
+        //     filter: {
+        //         type: 'none',
+        //         value: 0,
+        //     }
+        // },
+        // hover: {
+        //     filter: {
+        //         type: 'lighten',
+        //         value: 0.15,
+        //     }
+        // },
+        // active: {
+        //     allowMultipleDataPointsSelection: false,
+        //     filter: {
+        //         type: 'darken',
+        //         value: 0.35,
+        //     }
+        // },
+      },
+      grid: {
+        //not use it now
+        // show: true,
+        // borderColor: '#90A4AE',
+        // strokeDashArray: 0,
+        // position: 'back',
+        // xaxis: {
+        //     lines: {
+        //         show: false
+        //     }
+        // },
+        // yaxis: {
+        //     lines: {
+        //         show: false
+        //     }
+        // },
+        // row: {
+        //     colors: undefined,
+        //     opacity: 0.5
+        // },
+        // column: {
+        //     colors: undefined,
+        //     opacity: 0.5
+        // },
+        // padding: {
+        //     top: 0,
+        //     right: 0,
+        //     bottom: 0,
+        //     left: 0
+        // },
+      },
+      fill: {
+        // colors: undefined,   // No need for pie/ donut, other charts may need this, but it will be complicated for pie/donut charts. 
+        // colors: ['#1A73E8', '#B32824'], // May confuse theme.palette, colors, fill.color
+        // opacity: 0.9,    // No need for pie/ donut, other charts may need this,
+        type: 'gradient',  // Need, default is solid 'solid', 'gradient' is good for pie/ donut .'pattern','image' is too fancy
+        // type: ['solid', 'gradient'], 
+        // gradient: {
+        //   shade: 'dark',
+        //   type: 'horizontal',
+        //   shadeIntensity: 0.5,
+        //   gradientToColors: undefined,
+        //   inverseColors: true,
+        //   opacityFrom: 1,
+        //   opacityTo: 1,
+        //   stops: [0, 50, 100],
+        //   // colorStops: []
+        // },
+        // image: {   // No now 
+        //   src: ['https://images.unsplash.com/photo-1579353977828-2a4eab540b9a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80'],
+        //   width: undefined,
+        //   height: undefined,
+        // },
+        // pattern: { // No now 
+        //   style: 'verticalLines',
+        //   width: 6,
+        //   height: 6,
+        //   strokeWidth: 2,
+        // },
+      },
     };
     setTimeout(() => {
       console.log(JSON.stringify(this.chartOptions));
