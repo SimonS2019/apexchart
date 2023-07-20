@@ -58,6 +58,9 @@ export type ChartOptions = {
   labels?: any;
   //piechart needed as above
 
+  plotOptions: ApexPlotOptions;
+
+
   //time line chart as follow:
   // fill: ApexFill;
   // dataLabels?: ApexDataLabels;
@@ -112,7 +115,7 @@ export class PowerfulPieChartComponent {
         //     opacity: 0.35
         // }
         // fontFamily: 'Helvetica, Arial, sans-serif' // No need for all chart,
-        foreColor: '#373d3f', // might need? "foreColor" will be overridden if we assign a color to a specific property
+        foreColor: '#373d3f', // Need! important "foreColor" will be overridden if we assign a color to a specific property
         // group: undefined, // No need
         // height: 'auto', // No need, default is auto, can use format: 400 ,'400','100%'
         // id: undefined // No now
@@ -202,7 +205,8 @@ export class PowerfulPieChartComponent {
           // autoSelected: 'zoom'  // No for pie / donut
         },
         width: ' 100%', //Need? if need,lua to do the logical
-        type: 'pie', //Need,  lua to do the logical
+        type: 'donut', //Need,  lua to do the logical
+        // type: 'pie', //Need,  lua to do the logical
         // zoom: {
         //   // No for pie / donut
         //   enabled: true,
@@ -250,7 +254,7 @@ export class PowerfulPieChartComponent {
         },
       },
       theme: {
-        // mode: 'light', // Need? but automatic!  light || dark
+        mode: 'light', // Need? but automatic!  light || dark
         // mode: 'dark', // Need? but automatic!  light || dark
         // // May confuse theme.mode and chart.background.
 
@@ -520,6 +524,63 @@ export class PowerfulPieChartComponent {
         //   strokeWidth: 2,
         // },
       },
+      plotOptions: {
+        pie: {
+          startAngle: 0, // Need, default is 0
+          endAngle: 360, // Need, default is 360
+          expandOnClick: true,  // Need, true
+          offsetX: 0, // No need
+          offsetY: 0, // No need
+          customScale: 1, // No need
+          dataLabels: {
+              offset: 0, // Need, default is 0
+              minAngleToShowLabel: 10  // Need,
+          }, 
+          donut: { // if chart.type is 'pie', the follow is not matter
+            size: '65%', // Need, important!
+            // background: 'transparent', // No need, alwary use 'transparent'
+            labels: {
+              show: true, // Need, default is false 
+              name: {
+                show: true, //  Need , default is true
+                fontSize: '22px', //  Need
+                // fontFamily: 'Helvetica, Arial, sans-serif', // No need
+                // fontWeight: 600,// // No need, use default value is good
+                color: undefined, // Need!
+                // offsetY: -10, // Might need?
+                // formatter: function (val) {
+                //   return val
+                // }
+              },
+              value: {
+                show: true, //  Need , default is true
+                fontSize: '16px', //  Need
+                // fontFamily: 'Helvetica, Arial, sans-serif',  // No need
+                // fontWeight: 400, // // No need, use default value is good
+                color: undefined, // Need!
+                // offsetY: 16,// Might need?
+                // formatter: function (val) {
+                //   return val
+                // }
+              },
+              total: {
+                show: true, //Need. default is false
+                showAlways: false, //Need. default is false
+                label: 'Total', //Need
+                fontSize: '22px', //Need
+                // fontFamily: 'Helvetica, Arial, sans-serif', // No need
+                fontWeight: 600, // No need
+                color: '#373d3f', // Need
+                // formatter: function (w) {
+                //   return w.globals.seriesTotals.reduce((a, b) => {
+                //     return a + b
+                //   }, 0)
+                // }
+              }
+            }
+          },      
+        }
+      }
     };
     setTimeout(() => {
       console.log(JSON.stringify(this.chartOptions));
