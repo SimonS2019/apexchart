@@ -1,17 +1,32 @@
-<h3 style="color: red;">powerful-pie-chart-compare</h3>
-<!--The content below is only a placeholder and can be replaced.-->
-
-
-  <h5>simple-pie</h5>
+<h3 style="color: red;">powerful-pie-chart-version 1</h3>
 <!--The content below is only a placeholder and can be replaced.-->
 <div id="chart">
-    <apx-chart
+    <!-- <apx-chart
       [series]="chartOptions.series"
       [chart]="chartOptions.chart"
       [labels]="chartOptions.labels"
       [responsive]="chartOptions.responsive"
+    ></apx-chart> -->
+    <apx-chart
+      [series]="chartOptions.series"
+      [chart]="chartOptions.chart"
+      [title]="chartOptions.title"
+      [subtitle]="chartOptions.subtitle"
+      [theme]="chartOptions.theme"
+      [labels]="chartOptions.labels"
+      [responsive]="chartOptions.responsive"
+      [legend]="chartOptions.legend"
+      [dataLabels]="chartOptions.dataLabels"
+      [tooltip]="chartOptions.tooltip"
+      [colors]="chartOptions.colors"
+      [stroke]="chartOptions.stroke"
+      [states]="chartOptions.states"
+      [grid]="chartOptions.grid"
+      [fill]="chartOptions.fill"
+      [plotOptions]="chartOptions.plotOptions"
     ></apx-chart>
   </div>
+  <p>Title: left</p>
 
   <!-- <div id="chart">
     <apx-chart

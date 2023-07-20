@@ -9,9 +9,6 @@ import {
   ApexStates,
   ApexStroke,
   ApexTooltip,
-  ApexXAxis,
-  ApexYAxis,
-  ChartComponent,
 } from 'ng-apexcharts';
 
 import {
@@ -21,15 +18,6 @@ import {
   ApexTheme,
   ApexTitleSubtitle,
 } from 'ng-apexcharts';
-
-// export type ChartOptions = {
-//   series: ApexNonAxisChartSeries;
-//   chart: ApexChart;
-//   responsive: ApexResponsive[];
-//   labels: any;
-//   theme: ApexTheme;
-//   title: ApexTitleSubtitle;
-// };
 
 export type ChartOptions = {
   // Both means pie chart and donut chart
@@ -52,24 +40,17 @@ export type ChartOptions = {
   states: ApexStates;
   grid: ApexGrid;
   fill: ApexFill;
-
-  //piechart needed as below
-  responsive: ApexResponsive[];
   labels?: any;
-  //piechart needed as above
 
+  //pie/donut chart needed as below
+  responsive: ApexResponsive[];
   plotOptions: ApexPlotOptions;
-
+  //pie/donut needed as above
 
   //time line chart as follow:
-  // fill: ApexFill;
-  // dataLabels?: ApexDataLabels;
-  // grid?: ApexGrid;
   // yaxis?: ApexYAxis;
   // xaxis: ApexXAxis;
   // plotOptions: ApexPlotOptions;
-  // tooltip?: ApexTooltip;
-  // colors?: string[];
 };
 
 @Component({
@@ -204,7 +185,7 @@ export class PowerfulPieChartComponent {
           },
           // autoSelected: 'zoom'  // No for pie / donut
         },
-        width: ' 100%', //Need? if need,lua to do the logical
+        width: '450', //Need? if need,lua to do the logical
         type: 'donut', //Need,  lua to do the logical
         // type: 'pie', //Need,  lua to do the logical
         // zoom: {
