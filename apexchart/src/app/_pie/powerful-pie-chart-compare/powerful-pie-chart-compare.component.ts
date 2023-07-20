@@ -110,7 +110,7 @@ export class PowerfulPieChartCompareComponent {
         },
       },
       subtitle: {
-        text: 'This is a subtitle', //Front-end, NB: using an empty string will take up some space, we can use undefined
+        text: 'This is a subtitle', //Lua, NB: using an empty string will take up some space, we can use undefined
         align: 'center', //Front-end, default is 'left', Possible Options: 'left', 'center', 'right'
         style: {
           fontSize: '12px', //LUA,
