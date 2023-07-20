@@ -82,11 +82,144 @@ export class PowerfulPieChartComponent {
     this.chartOptions = {
       series: [44, 55, 13, 43, 22],
       chart: {
-        width: 380,
-        type: 'pie',
+        animations: {
+          enabled: true, // Need, default is true
+          // easing: 'easeinout', //'linear', 'easein', 'easeout', 'easeinout',  // No need, seems pie/ donut use same easing
+          speed: 800, // Need, default is 800
+          // animateGradually: {  // No now
+          //   enabled: true,
+          //   delay: 150,
+          // },
+          // dynamicAnimation: { // No now
+          //   enabled: true,
+          //   speed: 350,
+          // },
+        },
+        // background: '#fff', // No need for all chart, we're using the theme attribute, which can cause confusion if used at the same time
+        // brush: {  // No for pie / Donut
+        //   enabled: false,
+        //   target: undefined,
+        //   autoScaleYaxis: false
+        // }
+        // defaultLocale: 'en'  // No need for all chart,
+        //   dropShadow: {  // No need for all chart,
+        //     enabled: false,
+        //     enabledOnSeries: undefined,
+        //     top: 0,
+        //     left: 0,
+        //     blur: 3,
+        //     color: '#000',
+        //     opacity: 0.35
+        // }
+        // fontFamily: 'Helvetica, Arial, sans-serif' // No need for all chart,
+        foreColor: '#373d3f', // might need? "foreColor" will be overridden if we assign a color to a specific property
+        // group: undefined, // No need
+        // height: 'auto', // No need, default is auto, can use format: 400 ,'400','100%'
+        // id: undefined // No now
+        // defaultLocale: 'en',  // No need
+        // locales: [{ // No need
+        //   name: 'en',
+        //   options: {
+        //     months: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+        //     shortMonths: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+        //     days: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+        //     shortDays: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
+        //     toolbar: {
+        //       download: 'Download SVG',
+        //       selection: 'Selection',
+        //       selectionZoom: 'Selection Zoom',
+        //       zoomIn: 'Zoom In',
+        //       zoomOut: 'Zoom Out',
+        //       pan: 'Panning',
+        //       reset: 'Reset Zoom',
+        //     }
+        //   }
+        // }]
+        // offsetX: 0,  //No need
+        // offsetY: 0,  //No need
+        // parentHeightOffset: 15 //No need
+        // redrawOnParentResize: true, //No need
+        // redrawOnWindowResize: true, //No need
+        // selection: { //No for pie / donut
+        //   enabled: true,
+        //   type: 'x',
+        //   fill: {
+        //     color: '#24292e',
+        //     opacity: 0.1
+        //   },
+        //   stroke: {
+        //     width: 1,
+        //     dashArray: 3,
+        //     color: '#24292e',
+        //     opacity: 0.4
+        //   },
+        //   xaxis: {
+        //     min: undefined,
+        //     max: undefined
+        //   },
+        //   yaxis: {
+        //     min: undefined,
+        //     max: undefined
+        //   }
+        // },
         sparkline: {
+          // Need, important!
           enabled: false,
         },
+        // stacked: false // No for pie / donut
+        // stackType: 'normal' // No for pie / donut
+        toolbar: {
+          show: true, // Need, important!
+          // offsetX: 0,  //No need
+          // offsetY: 0, //No need
+          tools: {
+            download: true,
+            // selection: true,
+            // zoom: true,  // No for pie / donut
+            // zoomin: true, // No for pie / donut
+            // zoomout: true, // No for pie / donut
+            // pan: true, // No for pie / donut
+            // // reset: true | '<img src="/static/icons/reset.png" width="20">', // No for pie / donut
+            // customIcons: [] // No for pie / donut
+          },
+          export: {
+            csv: {
+              // Need, Important! , logic is in lua
+              filename: undefined,
+              columnDelimiter: ',',
+              headerCategory: 'category',
+              headerValue: 'value',
+            },
+            svg: {
+              // Need, Important! , logic is in lua
+              filename: 'Test 13223',
+            },
+            png: {
+              // Need, Important! , logic is in lua
+              filename: undefined,
+            },
+          },
+          // autoSelected: 'zoom'  // No for pie / donut
+        },
+        width: ' 100%', //Need? if need,lua to do the logical
+        type: 'pie', //Need,  lua to do the logical
+        // zoom: {
+        //   // No for pie / donut
+        //   enabled: true,
+        //   type: 'x',
+        //   autoScaleYaxis: false,
+        //   zoomedArea: {
+        //     fill: {
+        //       color: '#90CAF9',
+        //       opacity: 0.4,
+        //     },
+        //     stroke: {
+        //       color: '#0D47A1',
+        //       opacity: 0.4,
+        //       width: 1,
+        //     },
+        //   },
+        // },
       },
       title: {
         text: 'This is a Title', //Need, NB: using an empty string will take up some space (5px height?), we can use undefined
@@ -117,7 +250,10 @@ export class PowerfulPieChartComponent {
         },
       },
       theme: {
-        mode: 'light', // Need? but automatic!  light || dark
+        // mode: 'light', // Need? but automatic!  light || dark
+        // mode: 'dark', // Need? but automatic!  light || dark
+        // // May confuse theme.mode and chart.background.
+
         palette: 'palette1', //Need, default is "palette1"
         // palette1 to palette10  https://apexcharts.com/docs/options/theme/#
         // // May confuse theme.palette, colors, fill.color
@@ -166,10 +302,12 @@ export class PowerfulPieChartComponent {
         // customLegendItems: [], //No need,
         // offsetX: 0, //No need,
         // offsetY: 0, //No need,
-        // labels: {  //No need,
-        //   colors: undefined,  //No need,
-        //   useSeriesColors: false, //No need,
-        // }, //No need,
+        labels: {
+          //No need,
+          // colors: undefined,  //No need,
+          colors: 'red', //No need,
+          //   useSeriesColors: false, //No need,
+        }, //No need,
         // markers: {  //No need,
         //   width: 12, //No need,
         //   height: 12, //No need,
@@ -233,7 +371,7 @@ export class PowerfulPieChartComponent {
         //     blur: 1,
         //     color: '#000',
         //     opacity: 0.45
-        // }
+        // },
       },
       tooltip: {
         enabled: true, //Need, default is true
@@ -354,11 +492,11 @@ export class PowerfulPieChartComponent {
         // },
       },
       fill: {
-        // colors: undefined,   // No need for pie/ donut, other charts may need this, but it will be complicated for pie/donut charts. 
+        // colors: undefined,   // No need for pie/ donut, other charts may need this, but it will be complicated for pie/donut charts.
         // colors: ['#1A73E8', '#B32824'], // May confuse theme.palette, colors, fill.color
         // opacity: 0.9,    // No need for pie/ donut, other charts may need this,
-        type: 'gradient',  // Need, default is solid 'solid', 'gradient' is good for pie/ donut .'pattern','image' is too fancy
-        // type: ['solid', 'gradient'], 
+        type: 'gradient', // Need, default is solid 'solid', 'gradient' is good for pie/ donut .'pattern','image' is too fancy
+        // type: ['solid', 'gradient'],
         // gradient: {
         //   shade: 'dark',
         //   type: 'horizontal',
@@ -370,12 +508,12 @@ export class PowerfulPieChartComponent {
         //   stops: [0, 50, 100],
         //   // colorStops: []
         // },
-        // image: {   // No now 
+        // image: {   // No now
         //   src: ['https://images.unsplash.com/photo-1579353977828-2a4eab540b9a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80'],
         //   width: undefined,
         //   height: undefined,
         // },
-        // pattern: { // No now 
+        // pattern: { // No now
         //   style: 'verticalLines',
         //   width: 6,
         //   height: 6,
