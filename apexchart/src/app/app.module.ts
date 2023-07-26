@@ -47,6 +47,13 @@ import { PowerfulDonutChartComponent } from './_donut/powerful-donut-chart/power
 import { PowerfulPieChartCompareComponent } from './_pie/powerful-pie-chart-compare/powerful-pie-chart-compare.component';
 import { LuaExamplePieComponent } from './_pie/lua-example-pie/lua-example-pie.component';
 import { SparklineExamplePieComponent } from './_pie/sparkline-example-pie/sparkline-example-pie.component';
+import { BasicComponent } from './_timeline/basic/basic.component';
+import { CustomColorsComponent } from './_timeline/custom-colors/custom-colors.component';
+import { MultiSeriesComponent } from './_timeline/multi-series/multi-series.component';
+import { AdvancedComponent } from './_timeline/advanced/advanced.component';
+import { MultipleSeriesComponent } from './_timeline/multiple-series/multiple-series.component';
+import { DumbbellComponent } from './_timeline/dumbbell/dumbbell.component';
+import { PowerfulTimelineComponent } from './_timeline/powerful-timeline/powerful-timeline.component';
 
 @NgModule({
   declarations: [
@@ -93,7 +100,14 @@ import { SparklineExamplePieComponent } from './_pie/sparkline-example-pie/spark
     PowerfulDonutChartComponent,
     PowerfulPieChartCompareComponent,
     LuaExamplePieComponent,
-    SparklineExamplePieComponent
+    SparklineExamplePieComponent,
+    BasicComponent,
+    CustomColorsComponent,
+    MultiSeriesComponent,
+    AdvancedComponent,
+    MultipleSeriesComponent,
+    DumbbellComponent,
+    PowerfulTimelineComponent
   ],
   imports: [
     BrowserModule,
