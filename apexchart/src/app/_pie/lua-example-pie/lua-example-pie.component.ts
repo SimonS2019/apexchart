@@ -63,64 +63,72 @@ export class LuaExamplePieComponent  {
 
   constructor() {
     this.chartOptions = {
-      series: [44, 55, 13, 43, 22],
+      series: [44, 55, 13, 43, 22],//Lua data
       chart: {
         animations: {
-          enabled: true, 
+          enabled: true,   //Front-end DTO. basicOptions.animations
         },
-        type: 'donut', //Front-end,  
+        type: 'donut', //Front-end DTO. selectedChartType (5 means pie/ 6 means donut)
+        toolbar: {
+          show: true, //Front-end DTO. basicOptions.toolbar
+          tools: {
+            download: true, //Lua hard code. 
+          }
+        },
       },
       title: {
-        text: 'This is a big Title', //Lua
-        align: 'center', //Front-end, default is 'left', Possible Options: 'left', 'center', 'right'
+        text: 'This is a big Title', //Lua hard code. if dont want to show title can set = undefined;
+        align: 'center', ///Front-end DTO. basicOptions.titleAlign
         style: {
-          fontSize: '18px', //LUA,
+          fontSize: '18px', //LUA,hard code
         },
       },
       subtitle: {
-        text: 'This is a subtitle', //Lua, 
-        align: 'center', //Front-end, default is 'left', Possible Options: 'left', 'center', 'right'
+        text: 'This is a subtitle', //Lua hard code. if dont want to show subtitle can set = undefined;
+        align: 'center', //Front-end DTO. basicOptions.subtitleAlign
         style: {
-          fontSize: '12px', //LUA, 
+          fontSize: '12px', //LUA,hard code, 
         },
       },
       theme: {
-        mode: 'light', // Front end dto decide
-        palette: 'palette10', //Front-end, default is "palette1"
+        mode: 'light', // Front end DTO isDarkMode? 'light' : 'dark'
+        palette: 'palette10', //Front-end DTO. basicOptions.selectTheme
+        // we have a dropdown has 11 options 'palette1' to 'palette10' and "Same as ngx-charts", can we have a logic like :
+        //  if (basicOptions.selectTheme = "Same as ngx-charts") we use  this.chartOptions.colors to overwrite this.chartOptions.theme.palette
       },
-      labels: ['Team A', 'Team B', 'Team C', 'Team D', 'Team E'], // LUA
+      labels: ['Team A', 'Team B', 'Team C', 'Team D', 'Team E'], // //Lua data
       responsive: [],
       legend: {
-        show: true, //Front-end, default is true
-        position: 'right', ////Front-end, default is right, top, right , bottom, left
+        show: true, //Front-end DTO. basicOptions.enabledLegend
+        position: 'right', //Front-end DTO. basicOptions.legendPosition
       },
       dataLabels: {
-        enabled: true, //Front-end, default is true
+        enabled: true, //Front-end DTO. basicOptions.enabledDataLabels
       },
       tooltip: {
-        enabled: true, //Front-end, default is true
+        enabled: true, //Front-end DTO. basicOptions.enabledTooltip
       },
-      colors: ['#A300D6', '#66DA26', '#546E7A', '#E91E63', '#FF9800'], //LUA
+      colors: ['#A300D6', '#66DA26', '#546E7A', '#E91E63', '#FF9800'], // Front end DTO ngxColorScheme,
       stroke: {},
       states: {},
       grid: {},
       fill: {
-        type: 'gradient', // Front-end, default is solid 'solid', 'gradient' is good for pie/ donut .'pattern','image' is too fancy
+        type: 'gradient', //Front-end DTO. basicOptions.fillType
       },
       plotOptions: {
         pie: {
-          startAngle: 0, // Front-end, default is 0
-          endAngle: 90, // Front-end, default is 360F
+          startAngle: 0, //Front-end DTO. pieOptions.startAngle
+          endAngle: 90, //Front-end DTO. pieOptions.endAngle
           donut: {
-            size: '65%', // Front-end, important!
+            size: '65%', //Front-end DTO. pieOptions.donutSize
             labels: {
-              show: true, // Front-end, default is false
+              show: true, //Front-end DTO. pieOptions.donutShowLable
               total: {
-                show: true, // Lua 
-                label: 'Total', //LUA
-                fontSize: '22px', //LUA
-                fontWeight: 600, // LUA
-                color: 'black', // theme mode light = black/ #fff 
+                show: true, // Lua hard code
+                label: 'Total', // Lua hard code
+                fontSize: '22px', // Lua hard code
+                fontWeight: 600, // Lua hard code
+                color: 'black', // Lua hard code   if Front end DTO isDarkMode? 'light' : 'dark'
               },
             },
           },
