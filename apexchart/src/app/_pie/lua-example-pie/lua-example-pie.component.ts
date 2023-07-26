@@ -52,13 +52,12 @@ export type ChartOptions = {
   // xaxis: ApexXAxis;
   // plotOptions: ApexPlotOptions;
 };
-
 @Component({
-  selector: 'app-powerful-pie-chart-compare',
-  templateUrl: './powerful-pie-chart-compare.component.html',
-  styleUrls: ['./powerful-pie-chart-compare.component.css'],
+  selector: 'app-lua-example-pie',
+  templateUrl: './lua-example-pie.component.html',
+  styleUrls: ['./lua-example-pie.component.css']
 })
-export class PowerfulPieChartCompareComponent {
+export class LuaExamplePieComponent  {
   @ViewChild('chart', { static: false }) chart: any;
   public chartOptions: ChartOptions;
 
