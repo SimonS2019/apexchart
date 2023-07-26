@@ -46,6 +46,7 @@ import { PowerfulPieChartComponent } from './_pie/powerful-pie-chart/powerful-pi
 import { PowerfulDonutChartComponent } from './_donut/powerful-donut-chart/powerful-donut-chart.component';
 import { PowerfulPieChartCompareComponent } from './_pie/powerful-pie-chart-compare/powerful-pie-chart-compare.component';
 import { LuaExamplePieComponent } from './_pie/lua-example-pie/lua-example-pie.component';
+import { SparklineExamplePieComponent } from './_pie/sparkline-example-pie/sparkline-example-pie.component';
 
 @NgModule({
   declarations: [
@@ -91,7 +92,8 @@ import { LuaExamplePieComponent } from './_pie/lua-example-pie/lua-example-pie.c
     PowerfulPieChartComponent,
     PowerfulDonutChartComponent,
     PowerfulPieChartCompareComponent,
-    LuaExamplePieComponent
+    LuaExamplePieComponent,
+    SparklineExamplePieComponent
   ],
   imports: [
     BrowserModule,
