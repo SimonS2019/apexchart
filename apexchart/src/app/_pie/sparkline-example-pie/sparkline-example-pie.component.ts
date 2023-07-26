@@ -70,7 +70,7 @@ export class SparklineExamplePieComponent  {
           enabled: true, 
         },
         sparkline: {
-          enabled: true,
+          enabled: false,
         },
         toolbar: {
           show: true, // Front-end, important!

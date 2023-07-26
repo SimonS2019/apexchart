@@ -68,12 +68,6 @@ export class LuaExamplePieComponent  {
         animations: {
           enabled: true, 
         },
-        sparkline: {
-          enabled: true,
-        },
-        toolbar: {
-          show: true, // Front-end, important!
-        },
         type: 'donut', //Front-end,  
       },
       title: {
@@ -94,7 +88,7 @@ export class LuaExamplePieComponent  {
         mode: 'light', // Front end dto decide
         palette: 'palette10', //Front-end, default is "palette1"
       },
-      labels: ['Team A', 'Team B', 'Team C', 'Team D', 'Team E'], // LUA? but use lua service to do this!
+      labels: ['Team A', 'Team B', 'Team C', 'Team D', 'Team E'], // LUA
       responsive: [],
       legend: {
         show: true, //Front-end, default is true
