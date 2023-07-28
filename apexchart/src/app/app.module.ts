@@ -54,6 +54,7 @@ import { AdvancedComponent } from './_timeline/advanced/advanced.component';
 import { MultipleSeriesComponent } from './_timeline/multiple-series/multiple-series.component';
 import { DumbbellComponent } from './_timeline/dumbbell/dumbbell.component';
 import { PowerfulTimelineComponent } from './_timeline/powerful-timeline/powerful-timeline.component';
+import { LuaExampleComponent } from './_timeline/_timeline/lua-example/lua-example.component';
 
 @NgModule({
   declarations: [
@@ -107,7 +108,8 @@ import { PowerfulTimelineComponent } from './_timeline/powerful-timeline/powerfu
     AdvancedComponent,
     MultipleSeriesComponent,
     DumbbellComponent,
-    PowerfulTimelineComponent
+    PowerfulTimelineComponent,
+    LuaExampleComponent
   ],
   imports: [
     BrowserModule,

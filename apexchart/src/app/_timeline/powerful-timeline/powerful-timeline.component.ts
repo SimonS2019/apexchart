@@ -249,19 +249,19 @@ export class PowerfulTimelineComponent {
         }
       ],
       chart: {
-        // animations: {
-        //   enabled: true, // Need, default is true
-        //   // easing: 'easeinout', //'linear', 'easein', 'easeout', 'easeinout',  // No need, seems pie/ donut use same easing
-        //   speed: 800, // Need, default is 800
-        //   // animateGradually: {  // No now
-        //   //   enabled: true,
-        //   //   delay: 150,
-        //   // },
-        //   // dynamicAnimation: { // No now
-        //   //   enabled: true,
-        //   //   speed: 350,
-        //   // },
-        // },
+        animations: {
+          enabled: true, // Need, default is true
+          // easing: 'easeinout', //'linear', 'easein', 'easeout', 'easeinout',  // No need, seems pie/ donut use same easing
+          speed: 800, // Need, default is 800
+          // animateGradually: {  // No now
+          //   enabled: true,
+          //   delay: 150,
+          // },
+          // dynamicAnimation: { // No now
+          //   enabled: true,
+          //   speed: 350,
+          // },
+        },
         // background: '#fff', // No need for all chart, we're using the theme attribute, which can cause confusion if used at the same time
         // brush: {  // No for pie / Donut
         //   enabled: false,
@@ -279,7 +279,7 @@ export class PowerfulTimelineComponent {
         //     opacity: 0.35
         // }
         // fontFamily: 'Helvetica, Arial, sans-serif' // No need for all chart,
-        // foreColor: '#373d3f', // Need! important "foreColor" will be overridden if we assign a color to a specific property
+        foreColor: '#373d3f', // Need! important "foreColor" will be overridden if we assign a color to a specific property
         // group: undefined, // No need
         // height: 'auto', // No need, default is auto, can use format: 400 ,'400','100%'
         // id: undefined // No now
@@ -329,65 +329,48 @@ export class PowerfulTimelineComponent {
         //     max: undefined
         //   }
         // },
-        // sparkline: {
-        //   // Need, important!
-        //   enabled: false,
-        // },
+        sparkline: {
+          // Need, important!
+          enabled: false,
+        },
         // stacked: false // No for pie / donut
         // stackType: 'normal' // No for pie / donut
-        // toolbar: {
-        //   show: true, // Need, important!
-        //   // offsetX: 0,  //No need
-        //   // offsetY: 0, //No need
-        //   tools: {
-        //     download: true,
-        //     // selection: true,
-        //     // zoom: true,  // No for pie / donut
-        //     // zoomin: true, // No for pie / donut
-        //     // zoomout: true, // No for pie / donut
-        //     // pan: true, // No for pie / donut
-        //     // // reset: true | '<img src="/static/icons/reset.png" width="20">', // No for pie / donut
-        //     // customIcons: [] // No for pie / donut
-        //   },
-        //   export: {
-        //     csv: {
-        //       // Need, Important! , logic is in lua
-        //       filename: undefined,
-        //       columnDelimiter: ',',
-        //       headerCategory: 'category',
-        //       headerValue: 'value',
-        //     },
-        //     svg: {
-        //       // Need, Important! , logic is in lua
-        //       filename: 'Test 13223',
-        //     },
-        //     png: {
-        //       // Need, Important! , logic is in lua
-        //       filename: undefined,
-        //     },
-        //   },
-        //   // autoSelected: 'zoom'  // No for pie / donut
-        // },
+        toolbar: {
+          show: true, // Need, important!
+          // offsetX: 0,  //No need
+          // offsetY: 0, //No need
+          tools: {
+            download: true,
+            // selection: true,
+            // zoom: true,  // No for pie / donut
+            // zoomin: true, // No for pie / donut
+            // zoomout: true, // No for pie / donut
+            // pan: true, // No for pie / donut
+            // // reset: true | '<img src="/static/icons/reset.png" width="20">', // No for pie / donut
+            // customIcons: [] // No for pie / donut
+          },
+          export: {
+            csv: {
+              // Need, Important! , logic is in lua
+              filename: undefined,
+              columnDelimiter: ',',
+              headerCategory: 'category',
+              headerValue: 'value',
+            },
+            svg: {
+              // Need, Important! , logic is in lua
+              filename: 'Test 13223',
+            },
+            png: {
+              // Need, Important! , logic is in lua
+              filename: undefined,
+            },
+          },
+          // autoSelected: 'zoom'  // No for pie / donut
+        },
         width: '100%', //Need? if need,lua to do the logical
         type: 'rangeBar', //Need,  lua to do the logical
-        // type: 'pie', //Need,  lua to do the logical
-        // zoom: {
-        //   // No for pie / donut
-        //   enabled: true,
-        //   type: 'x',
-        //   autoScaleYaxis: false,
-        //   zoomedArea: {
-        //     fill: {
-        //       color: '#90CAF9',
-        //       opacity: 0.4,
-        //     },
-        //     stroke: {
-        //       color: '#0D47A1',
-        //       opacity: 0.4,
-        //       width: 1,
-        //     },
-        //   },
-        // },
+  
       },
       title: {
         text: 'This is a Title', //Need, NB: using an empty string will take up some space (5px height?), we can use undefined
