@@ -251,6 +251,7 @@ export class MultipleSeriesComponent {
         position: "right"
       },
       tooltip: {
+        
         custom: function (opts) {
           const fromYear = new Date(opts.y1).getFullYear();
           const toYear = new Date(opts.y2).getFullYear();

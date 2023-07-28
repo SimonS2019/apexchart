@@ -1,4 +1,6 @@
 import { Component, ViewChild } from '@angular/core';
+import * as moment from "moment";
+
 import {
   ApexAxisChartSeries,
   ApexDataLabels,
@@ -10,6 +12,7 @@ import {
   ApexStroke,
   ApexTooltip,
   ApexXAxis,
+  ApexYAxis,
 } from 'ng-apexcharts';
 
 import {
@@ -43,6 +46,7 @@ export type ChartOptions = {
   fill: ApexFill;
   labels?: any;
   xaxis: ApexXAxis;
+  yaxis: ApexYAxis;
 
   //pie/donut chart needed as below
   responsive: ApexResponsive[];
@@ -66,53 +70,198 @@ export class PowerfulTimelineComponent {
   constructor() {
     this.chartOptions = {
       series: [
+        // George Washington
         {
+          name: "George Washington",
           data: [
             {
-              x: "Code",
+              x: "President",
               y: [
-                new Date("2019-03-02").getTime(),
-                new Date("2019-03-04").getTime()
+                new Date(1789, 3, 30).getTime(),
+                new Date(1797, 2, 4).getTime()
+              ]
+            }
+          ]
+        },
+        // John Adams
+        {
+          name: "John Adams",
+          data: [
+            {
+              x: "President",
+              y: [
+                new Date(1797, 2, 4).getTime(),
+                new Date(1801, 2, 4).getTime()
               ]
             },
             {
-              x: "Test",
+              x: "Vice President",
               y: [
-                new Date("2019-03-04").getTime(),
-                new Date("2019-03-08").getTime()
+                new Date(1789, 3, 21).getTime(),
+                new Date(1797, 2, 4).getTime()
+              ]
+            }
+          ]
+        },
+        // Thomas Jefferson
+        {
+          name: "Thomas Jefferson",
+          data: [
+            {
+              x: "President",
+              y: [
+                new Date(1801, 2, 4).getTime(),
+                new Date(1809, 2, 4).getTime()
               ]
             },
             {
-              x: "Validation",
+              x: "Vice President",
               y: [
-                new Date("2019-03-08").getTime(),
-                new Date("2019-03-12").getTime()
+                new Date(1797, 2, 4).getTime(),
+                new Date(1801, 2, 4).getTime()
               ]
             },
             {
-              x: "Deployment",
+              x: "Secretary of State",
               y: [
-                new Date("2019-03-12").getTime(),
-                new Date("2019-03-18").getTime()
+                new Date(1790, 2, 22).getTime(),
+                new Date(1793, 11, 31).getTime()
+              ]
+            }
+          ]
+        },
+        // Aaron Burr
+        {
+          name: "Aaron Burr",
+          data: [
+            {
+              x: "Vice President",
+              y: [
+                new Date(1801, 2, 4).getTime(),
+                new Date(1805, 2, 4).getTime()
+              ]
+            }
+          ]
+        },
+        // George Clinton
+        {
+          name: "George Clinton",
+          data: [
+            {
+              x: "Vice President",
+              y: [
+                new Date(1805, 2, 4).getTime(),
+                new Date(1812, 3, 20).getTime()
+              ]
+            }
+          ]
+        },
+        // John Jay
+        {
+          name: "John Jay",
+          data: [
+            {
+              x: "Secretary of State",
+              y: [
+                new Date(1789, 8, 25).getTime(),
+                new Date(1790, 2, 22).getTime()
+              ]
+            }
+          ]
+        },
+        // Edmund Randolph
+        {
+          name: "Edmund Randolph",
+          data: [
+            {
+              x: "Secretary of State",
+              y: [
+                new Date(1794, 0, 2).getTime(),
+                new Date(1795, 7, 20).getTime()
+              ]
+            }
+          ]
+        },
+        // Timothy Pickering
+        {
+          name: "Timothy Pickering",
+          data: [
+            {
+              x: "Secretary of State",
+              y: [
+                new Date(1795, 7, 20).getTime(),
+                new Date(1800, 4, 12).getTime()
+              ]
+            }
+          ]
+        },
+        // Charles Lee
+        {
+          name: "Charles Lee",
+          data: [
+            {
+              x: "Secretary of State",
+              y: [
+                new Date(1800, 4, 13).getTime(),
+                new Date(1800, 5, 5).getTime()
+              ]
+            }
+          ]
+        },
+        // John Marshall
+        {
+          name: "John Marshall",
+          data: [
+            {
+              x: "Secretary of State",
+              y: [
+                new Date(1800, 5, 13).getTime(),
+                new Date(1801, 2, 4).getTime()
+              ]
+            }
+          ]
+        },
+        // Levi Lincoln
+        {
+          name: "Levi Lincoln",
+          data: [
+            {
+              x: "Secretary of State",
+              y: [
+                new Date(1801, 2, 5).getTime(),
+                new Date(1801, 4, 1).getTime()
+              ]
+            }
+          ]
+        },
+        // James Madison
+        {
+          name: "James Madison",
+          data: [
+            {
+              x: "Secretary of State",
+              y: [
+                new Date(1801, 4, 2).getTime(),
+                new Date(1809, 2, 3).getTime()
               ]
             }
           ]
         }
       ],
       chart: {
-        animations: {
-          enabled: true, // Need, default is true
-          // easing: 'easeinout', //'linear', 'easein', 'easeout', 'easeinout',  // No need, seems pie/ donut use same easing
-          speed: 800, // Need, default is 800
-          // animateGradually: {  // No now
-          //   enabled: true,
-          //   delay: 150,
-          // },
-          // dynamicAnimation: { // No now
-          //   enabled: true,
-          //   speed: 350,
-          // },
-        },
+        // animations: {
+        //   enabled: true, // Need, default is true
+        //   // easing: 'easeinout', //'linear', 'easein', 'easeout', 'easeinout',  // No need, seems pie/ donut use same easing
+        //   speed: 800, // Need, default is 800
+        //   // animateGradually: {  // No now
+        //   //   enabled: true,
+        //   //   delay: 150,
+        //   // },
+        //   // dynamicAnimation: { // No now
+        //   //   enabled: true,
+        //   //   speed: 350,
+        //   // },
+        // },
         // background: '#fff', // No need for all chart, we're using the theme attribute, which can cause confusion if used at the same time
         // brush: {  // No for pie / Donut
         //   enabled: false,
@@ -130,7 +279,7 @@ export class PowerfulTimelineComponent {
         //     opacity: 0.35
         // }
         // fontFamily: 'Helvetica, Arial, sans-serif' // No need for all chart,
-        foreColor: '#373d3f', // Need! important "foreColor" will be overridden if we assign a color to a specific property
+        // foreColor: '#373d3f', // Need! important "foreColor" will be overridden if we assign a color to a specific property
         // group: undefined, // No need
         // height: 'auto', // No need, default is auto, can use format: 400 ,'400','100%'
         // id: undefined // No now
@@ -180,46 +329,46 @@ export class PowerfulTimelineComponent {
         //     max: undefined
         //   }
         // },
-        sparkline: {
-          // Need, important!
-          enabled: false,
-        },
+        // sparkline: {
+        //   // Need, important!
+        //   enabled: false,
+        // },
         // stacked: false // No for pie / donut
         // stackType: 'normal' // No for pie / donut
-        toolbar: {
-          show: true, // Need, important!
-          // offsetX: 0,  //No need
-          // offsetY: 0, //No need
-          tools: {
-            download: true,
-            // selection: true,
-            // zoom: true,  // No for pie / donut
-            // zoomin: true, // No for pie / donut
-            // zoomout: true, // No for pie / donut
-            // pan: true, // No for pie / donut
-            // // reset: true | '<img src="/static/icons/reset.png" width="20">', // No for pie / donut
-            // customIcons: [] // No for pie / donut
-          },
-          export: {
-            csv: {
-              // Need, Important! , logic is in lua
-              filename: undefined,
-              columnDelimiter: ',',
-              headerCategory: 'category',
-              headerValue: 'value',
-            },
-            svg: {
-              // Need, Important! , logic is in lua
-              filename: 'Test 13223',
-            },
-            png: {
-              // Need, Important! , logic is in lua
-              filename: undefined,
-            },
-          },
-          // autoSelected: 'zoom'  // No for pie / donut
-        },
-        width: '450', //Need? if need,lua to do the logical
+        // toolbar: {
+        //   show: true, // Need, important!
+        //   // offsetX: 0,  //No need
+        //   // offsetY: 0, //No need
+        //   tools: {
+        //     download: true,
+        //     // selection: true,
+        //     // zoom: true,  // No for pie / donut
+        //     // zoomin: true, // No for pie / donut
+        //     // zoomout: true, // No for pie / donut
+        //     // pan: true, // No for pie / donut
+        //     // // reset: true | '<img src="/static/icons/reset.png" width="20">', // No for pie / donut
+        //     // customIcons: [] // No for pie / donut
+        //   },
+        //   export: {
+        //     csv: {
+        //       // Need, Important! , logic is in lua
+        //       filename: undefined,
+        //       columnDelimiter: ',',
+        //       headerCategory: 'category',
+        //       headerValue: 'value',
+        //     },
+        //     svg: {
+        //       // Need, Important! , logic is in lua
+        //       filename: 'Test 13223',
+        //     },
+        //     png: {
+        //       // Need, Important! , logic is in lua
+        //       filename: undefined,
+        //     },
+        //   },
+        //   // autoSelected: 'zoom'  // No for pie / donut
+        // },
+        width: '100%', //Need? if need,lua to do the logical
         type: 'rangeBar', //Need,  lua to do the logical
         // type: 'pie', //Need,  lua to do the logical
         // zoom: {
@@ -246,7 +395,7 @@ export class PowerfulTimelineComponent {
         // margin: 10, // No need, default ?, ready to use
         // offsetX: 0, // No need, default is 0, ready to use
         // offsetY: 0, // No need, default is 0, ready to use
-        // floating: false, // No need, default is false, ready to use
+        floating: false, // No need, default is false, ready to use
         style: {
           fontSize: '18px', //Need,
           fontWeight: 'bold', //Need, String | Number
@@ -264,7 +413,7 @@ export class PowerfulTimelineComponent {
         style: {
           fontSize: '12px',
           fontWeight: 'normal',
-          fontFamily: undefined,
+          // fontFamily: undefined,
           color: '#9699a2',
         },
       },
@@ -273,15 +422,15 @@ export class PowerfulTimelineComponent {
         // mode: 'dark', // Need? but automatic!  light || dark
         // // May confuse theme.mode and chart.background.
 
-        palette: 'palette1', //Need, default is "palette1"
+        // palette: 'palette1', //No Need, default is "palette1"
         // palette1 to palette10  https://apexcharts.com/docs/options/theme/#
         // // May confuse theme.palette, colors, fill.color
-        monochrome: {
-          enabled: false, //Need, default is false
-          // color: '#255aee',  // Need default is #008ffb
-          shadeTo: 'light', // Need, default is light. Accepts either light or dark
-          shadeIntensity: 0, // What should be the intensity while generating shades Accepts from 0 to 1
-        },
+        // monochrome: { //work, but for timeline chart, this is 
+        //   enabled: true, //Need, default is false
+        //   color: '#eb4034',  // Need default is #008ffb
+        //   shadeTo: 'light', // Need, default is light. Accepts either light or dark
+        //   shadeIntensity: 0, // What should be the intensity while generating shades Accepts from 0 to 1
+        // },
       },
       // labels: ['Team A', 'Team B', 'Team C', 'Team D', 'Team E'], // Need? but use lua service to do this!
       //In Axis Charts (line / column), labels can be set instead of setting xaxis categories option. While, in pie/donut charts, each label corresponds to value in series array.
@@ -321,12 +470,12 @@ export class PowerfulTimelineComponent {
         // customLegendItems: [], //No need,
         // offsetX: 0, //No need,
         // offsetY: 0, //No need,
-        labels: {
-          //No need,
-          // colors: undefined,  //No need,
-          colors: 'red', //No need,
-          //   useSeriesColors: false, //No need,
-        }, //No need,
+        // labels: {
+        //   //No need,
+        //   // colors: undefined,  //No need,
+        //   colors: 'red', //No need,
+        //   //   useSeriesColors: false, //No need,
+        // }, //No need,
         // markers: {  //No need,
         //   width: 12, //No need,
         //   height: 12, //No need,
@@ -350,58 +499,70 @@ export class PowerfulTimelineComponent {
         //   highlightDataSeries: true,  //No need,
         // },
       },
-      dataLabels: {
-        enabled: true, //Need, default is true
-        // enabledOnSeries: undefined, //No need,
-        // formatter: function (val, opts) {
-        //     return val
+      dataLabels: { //no Now
+        // enabled: true, //Need, default is true
+        // // enabledOnSeries: undefined, //No need,
+        // formatter: function(val:any[], opts) {
+        //   var label = opts.w.globals.labels[opts.dataPointIndex];
+        //   console.log(val);
+          
+        //   var a = moment(val[0]);
+        //   var b = moment(val[1]);
+        //   console.log(a);
+          
+        //   var diff = b.diff(a, "days");
+        //   console.log(diff);
+          
+        //   return label + ": " + diff + (diff > 1 ? " days" : " day");
+        //   // return label + ": " + diff + (diff > 1 ? " days" : " day");
+          
         // },
-        // textAnchor: 'middle',  //No need for pie and dunut chart,
-        // distributed: false, //No need
-        // offsetX: 0, //No need
-        // offsetY: 0,//No need
-        style: {
-          fontSize: '14px', //Need, default is 12px
-          // fontFamily: 'Helvetica, Arial, sans-serif',//No need
-          fontWeight: 'bold', //Need
-          // colors: undefined //No need for pie and dunut chart, because we use 'foreColor'
-        },
-        background: {
-          enabled: true, //Need, default is false
-          foreColor: '#fff', //Need
-          padding: 4, //Need
-          borderRadius: 2, //Need
-          borderWidth: 3, //Need
-          borderColor: 'black', //Need
-          opacity: 0.8, //Need
-          // dropShadow: { //No need
-          //   enabled: false,
-          //   top: 1,
-          //   left: 1,
-          //   blur: 1,
-          //   color: '#000',
-          //   opacity: 0.45
-          // }
-        },
-        // dropShadow: {//No need
-        //     enabled: false,
-        //     top: 1,
-        //     left: 1,
-        //     blur: 1,
-        //     color: '#000',
-        //     opacity: 0.45
+        // // textAnchor: 'middle',  //No need for pie and dunut chart,
+        // // distributed: false, //No need
+        // // offsetX: 0, //No need
+        // // offsetY: 0,//No need
+        // style: {
+        //   fontSize: '14px', //Need, default is 12px
+        //   // fontFamily: 'Helvetica, Arial, sans-serif',//No need
+        //   fontWeight: 'bold', //Need
+        //   // colors: undefined //No need for pie and dunut chart, because we use 'foreColor'
         // },
+        // background: {
+        //   enabled: true, //Need, default is false
+        //   foreColor: '#fff', //Need
+        //   padding: 4, //Need
+        //   borderRadius: 2, //Need
+        //   borderWidth: 3, //Need
+        //   borderColor: 'black', //Need
+        //   opacity: 0.8, //Need
+        //   // dropShadow: { //No need
+        //   //   enabled: false,
+        //   //   top: 1,
+        //   //   left: 1,
+        //   //   blur: 1,
+        //   //   color: '#000',
+        //   //   opacity: 0.45
+        //   // }
+        // },
+        // // dropShadow: {//No need
+        // //     enabled: false,
+        // //     top: 1,
+        // //     left: 1,
+        // //     blur: 1,
+        // //     color: '#000',
+        // //     opacity: 0.45
+        // // },
       },
       tooltip: {
         enabled: true, //Need, default is true
         // enabledOnSeries: undefined, //No need
         // shared: true, //No need
-        followCursor: false, //No need,Pie chart does not work, some others is work
+        followCursor: true, //Need,Pie chart does not work, Timeline is work!
         // intersect: false,  // No need, Pie chart will cause some error !!
         // inverseOrder: false,  //No need
         // custom: undefined,  //No need
-        fillSeriesColor: false, //Need, default is true , When enabled, fill the tooltip background with the corresponding series color
-        theme: 'dark', //Need, default is dark.
+        fillSeriesColor: true, //Time line no work ?
+        theme: 'light', //Need, default is dark.
         // Might be a good idea to go against the Apex theme?? Accepts either light or dark
 
         style: {
@@ -429,9 +590,9 @@ export class PowerfulTimelineComponent {
         //     title: 'Size: '
         // },
 
-        marker: {
-          show: true, //Need, default is true
-        },
+        // marker: {
+        //   show: true, //Timeline does not work
+        // },
 
         // items: {  //No need, seem does not work in pie chart
         //    display: "flex",
@@ -447,13 +608,30 @@ export class PowerfulTimelineComponent {
         // },
       },
       colors: ['#2E93fA', '#66DA26', '#546E7A', '#E91E63', '#FF9800'],
+      // colors: [
+      //   "#66DA26",
+      //   "#00E396",
+      //   "#FEB019",
+      //   "#FF4560",
+      //   "#775DD0",
+      //   "#3F51B5",
+      //   "#546E7A",
+      //   "#D4526E",
+      //   "#8D5B4C",
+      //   "#F86624",
+      //   "#D7263D",
+      //   "#1B998B",
+      //   "#2E294E",
+      //   "#F46036",
+      //   "#E2C044"
+      // ],
       // // Need? but use lua service to do this! overwrite the theme.palette
       // // May confuse theme.palette, colors, fill.color
       stroke: {
-        show: true, //Need, default is true
+        // show: true, //No Need, default is false
         // curve: 'smooth',  //No need, Pie/ Donut no work
         // lineCap: 'butt', //No need, Pie/ Donut no work
-        // colors: undefined, //No need, Pie/ Donut need
+        // colors: ['#fff'], //No need, Pie/ Donut need
         // width: 2,    //No need, Pie/ Donut need
         // dashArray: 0,  //No need, Pie/ Donut need
       },
@@ -510,11 +688,11 @@ export class PowerfulTimelineComponent {
         //     left: 0
         // },
       },
-      fill: {
+      fill: { //For timeline chart, these properties is sucks
         // colors: undefined,   // No need for pie/ donut, other charts may need this, but it will be complicated for pie/donut charts.
         // colors: ['#1A73E8', '#B32824'], // May confuse theme.palette, colors, fill.color
         // opacity: 0.9,    // No need for pie/ donut, other charts may need this,
-        type: 'gradient', // Need, default is solid 'solid', 'gradient' is good for pie/ donut .'pattern','image' is too fancy
+        // type: 'solid', // Need, default is solid 'solid', 'gradient' is good for pie/ donut .'pattern','image' is too fancy
         // type: ['solid', 'gradient'],
         // gradient: {
         //   shade: 'dark',
@@ -541,12 +719,228 @@ export class PowerfulTimelineComponent {
       },
       plotOptions: {
         bar: {
-          horizontal: true
+          horizontal: true,  // Need, but for timeline, it alwary true
+          barHeight: "50%", // Need
+          rangeBarGroupRows: true,  //Need, default is false 
+        
+            // borderRadius: 1, // This property in current library version is suck
+
+            // columnWidth: '100%',// This property in Timeline not work
+
+            // distributed: false, //No Need, default is false 
+            // rangeBarOverlap: true, //Now No Need
+    
+            // colors: {  // This property in Timeline not work
+            //     ranges: [{
+            //         from: 0,
+            //         to: 0,
+            //         color: undefined
+            //     }],
+            //     backgroundBarColors: [],
+            //     backgroundBarOpacity: 1,
+            //     backgroundBarRadius: 0,
+            // },
+            // dataLabels: {  // This property in Timeline not work
+            //     position: 'top',
+            //     maxItems: 100,
+            //     hideOverflowingLabels: true,
+           
+            // }
         }
-      },
+    },
       xaxis: {
-        type: "datetime"
-      }
+        type: 'datetime', // Need, but alwary "datetime" if chart is timeline
+        categories: [],  // This property is suck
+        tickAmount: undefined,  // This property in Timeline not work
+        // tickPlacement: 'between',  // This property in Timeline not work
+        // tickPlacement: 'on',  // This property in Timeline not work
+        min: undefined, // This property in Timeline not work
+        max: undefined, // This property in Timeline not work
+        range: undefined,// This property in Timeline not work
+        floating: false, // This property in Timeline not work
+        decimalsInFloat: undefined, // This property in Timeline not work
+        overwriteCategories: undefined, // This property in Timeline not work
+        position: 'bottom', // No need
+        // labels: { // No need
+        //     show: true,
+        //     rotate: -45,
+        //     rotateAlways: false,
+        //     hideOverlappingLabels: true,
+        //     showDuplicates: false,
+        //     trim: false,
+        //     minHeight: undefined,
+        //     maxHeight: 120,
+        //     style: {
+        //         colors: [],
+        //         fontSize: '12px',
+        //         fontFamily: 'Helvetica, Arial, sans-serif',
+        //         fontWeight: 400,
+        //         cssClass: 'apexcharts-xaxis-label',
+        //     },
+        //     offsetX: 0,
+        //     offsetY: 0,
+        //     format: undefined,
+        //     formatter: undefined,
+        //     datetimeUTC: true,
+        //     datetimeFormatter: {
+        //         year: 'yyyy',
+        //         month: "MMM 'yy",
+        //         day: 'dd MMM',
+        //         hour: 'HH:mm',
+        //     },
+        // },
+        // group: {
+        //   groups: [],
+        //   style: {
+        //     colors: [],
+        //     fontSize: '12px',
+        //     fontWeight: 400,
+        //     fontFamily: undefined,
+        //     cssClass: ''
+        //   }
+        // },
+        // axisBorder: {
+        //     // show: true,
+        //     // color: '#78909C',
+        //     // height: 1,
+        //     // width: '100%',
+        //     // offsetX: 0,
+        //     // offsetY: 0
+        // },
+        // axisTicks: {
+        //     show: true,
+        //     borderType: 'solid',
+        //     color: '#78909C',
+        //     height: 6,
+        //     offsetX: 0,
+        //     offsetY: 0
+        // },
+       
+        // title: {
+        //     text: undefined,
+        //     offsetX: 0,
+        //     offsetY: 0,
+        //     style: {
+        //         color: undefined,
+        //         fontSize: '12px',
+        //         fontFamily: 'Helvetica, Arial, sans-serif',
+        //         fontWeight: 600,
+        //         cssClass: 'apexcharts-xaxis-title',
+        //     },
+        // },
+        // crosshairs: {
+        //     show: true,
+        //     width: 1,
+        //     position: 'back',
+        //     opacity: 0.9,        
+        //     stroke: {
+        //         color: '#b6b6b6',
+        //         width: 0,
+        //         dashArray: 0,
+        //     },
+        //     fill: {
+        //         type: 'solid',
+        //         color: '#B1B9C4',
+        //         gradient: {
+        //             colorFrom: '#D8E3F0',
+        //             colorTo: '#BED1E6',
+        //             stops: [0, 100],
+        //             opacityFrom: 0.4,
+        //             opacityTo: 0.5,
+        //         },
+        //     },
+        //     dropShadow: {
+        //         enabled: false,
+        //         top: 0,
+        //         left: 0,
+        //         blur: 1,
+        //         opacity: 0.4,
+        //     },
+        // },
+        // tooltip: {
+        //     enabled: true,
+        //     formatter: undefined,
+        //     offsetY: 0,
+        //     // style: {
+        //     //   fontSize: 0,
+        //     //   fontFamily: 0,
+        //     // },
+        // },
+    },
+      yaxis: {
+        show: true, //Need,
+        // showAlways: false, // This property in Timeline not work
+        // showForNullSeries: true, //No need
+        // seriesName: undefined,  //No need
+        // opposite: false, //This property in Timeline is suck
+        // reversed: false, // This property in Timeline not work
+        // logarithmic: false, // This property in Timeline not work
+        // logBase: 10,// This property in Timeline not work
+        // tickAmount: 6, //No need
+        // min: 6,
+        // max: 6,
+        // forceNiceScale: false,//No need
+        // floating: false,//No need
+        // decimalsInFloat: undefined,//No need
+        // labels: {    //work, but no need
+        //     show: true, //work, but no need
+        //     align: 'left', //work, but no need
+        //     minWidth: 0,//work, but no need
+        //     maxWidth: 160,//work, but no need
+        //     style: {
+        //         colors: [], //work, but no need
+        //         fontSize: '12px', 
+        //         fontFamily: 'Helvetica, Arial, sans-serif',
+        //         fontWeight: 400,
+        //         cssClass: 'apexcharts-yaxis-label',
+        //     },
+        //     offsetX: 0,
+        //     offsetY: 0,
+        //     rotate: 0,
+        //     // formatter: (value) => { return val },
+        // },
+        // axisBorder: { // This property in Timeline not work
+        //     show: true,
+        //     color: '#78909C',
+        //     offsetX: 0,
+        //     offsetY: 0
+        // },
+        // axisTicks: { // This property in Timeline not work
+        //     show: true,
+        //     // borderType: 'solid',
+        //     color: '#78909C',
+        //     width: 6,
+        //     offsetX: 0,
+        //     offsetY: 0
+        // },
+        // title: { // This property in Timeline not work
+        //     text: undefined,
+        //     rotate: -90,
+        //     offsetX: 0,
+        //     offsetY: 0,
+        //     style: {
+        //         color: undefined,
+        //         fontSize: '12px',
+        //         fontFamily: 'Helvetica, Arial, sans-serif',
+        //         fontWeight: 600,
+        //         cssClass: 'apexcharts-yaxis-title',
+        //     },
+        // },
+        // crosshairs: {// This property in Timeline not work
+        //     show: true,
+        //     position: 'back',
+        //     stroke: {
+        //         color: '#b6b6b6',
+        //         width: 1,
+        //         dashArray: 0,
+        //     },
+        // },
+        // tooltip: { // This property in Timeline not work
+        //     enabled: true,
+        //     offsetX: 0,
+        // },
+        
+    }
     };
     setTimeout(() => {
       console.log(JSON.stringify(this.chartOptions));

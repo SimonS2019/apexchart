@@ -98,8 +98,11 @@ export class CustomColorsComponent {
         enabled: true,
         formatter: function(val:any[], opts) {
           var label = opts.w.globals.labels[opts.dataPointIndex];
+          
           var a = moment(val[0]);
           var b = moment(val[1]);
+          // console.log(a);
+
           var diff = b.diff(a, "days");
           return label + ": " + diff + (diff > 1 ? " days" : " day");
           // return label + ": " + diff + (diff > 1 ? " days" : " day");
