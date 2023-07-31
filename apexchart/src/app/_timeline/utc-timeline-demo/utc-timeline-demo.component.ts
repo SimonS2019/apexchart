@@ -78,8 +78,8 @@ export class UtcTimelineDemoComponent {
                 {
                     x: "President",
                     y: [
-                        -5701491544000,
-                        -5453955544000
+                        5701491544000,
+                        5453955544000
                     ],
                 }
             ]
@@ -90,15 +90,15 @@ export class UtcTimelineDemoComponent {
                 {
                     x: "President",
                     y: [
-                        -5453955544000,
-                        -5327811544000
+                        5453955544000,
+                        5327811544000
                     ],
                 },
                 {
                     x: "Vice President",
                     y: [
-                        -5702269144000,
-                        -5453955544000
+                        5702269144000,
+                        5453955544000
                     ],
                 }
             ]
@@ -109,22 +109,22 @@ export class UtcTimelineDemoComponent {
                 {
                     x: "President",
                     y: [
-                        -5327811544000,
-                        -5075350744000
+                        5327811544000,
+                        5075350744000
                     ],
                 },
                 {
                     x: "Vice President",
                     y: [
-                        -5453955544000,
-                        -5327811544000
+                        5453955544000,
+                        5327811544000
                     ],
                 },
                 {
                     x: "Secretary of State",
                     y: [
-                        -5673325144000,
-                        -5554093144000
+                        5673325144000,
+                        5554093144000
                     ],
                 }
             ]
@@ -135,8 +135,8 @@ export class UtcTimelineDemoComponent {
                 {
                     x: "Vice President",
                     y: [
-                        -5327811544000,
-                        -5201581144000
+                        5327811544000,
+                        5201581144000
                     ],
                 }
             ]
@@ -147,8 +147,8 @@ export class UtcTimelineDemoComponent {
                 {
                     x: "Vice President",
                     y: [
-                        -5201581144000,
-                        -4976595544000
+                        5201581144000,
+                        4976595544000
                     ],
                 }
             ]
@@ -159,8 +159,8 @@ export class UtcTimelineDemoComponent {
                 {
                     x: "Secretary of State",
                     y: [
-                        -5688704344000,
-                        -5673325144000
+                        5688704344000,
+                        5673325144000
                     ],
                 }
             ]
@@ -171,8 +171,8 @@ export class UtcTimelineDemoComponent {
                 {
                     x: "Secretary of State",
                     y: [
-                        -5553920344000,
-                        -5502512344000
+                        5553920344000,
+                        5502512344000
                     ],
                 }
             ]
@@ -183,8 +183,8 @@ export class UtcTimelineDemoComponent {
                 {
                     x: "Secretary of State",
                     y: [
-                        -5502512344000,
-                        -5353385944000
+                        5502512344000,
+                        5353385944000
                     ],
                 }
             ]
@@ -195,8 +195,8 @@ export class UtcTimelineDemoComponent {
                 {
                     x: "Secretary of State",
                     y: [
-                        -5353299544000,
-                        -5351312344000
+                        5353299544000,
+                        5351312344000
                     ],
                 }
             ]
@@ -207,8 +207,8 @@ export class UtcTimelineDemoComponent {
                 {
                     x: "Secretary of State",
                     y: [
-                        -5350621144000,
-                        -5327811544000
+                        5350621144000,
+                        5327811544000
                     ],
                 }
             ]
@@ -219,8 +219,8 @@ export class UtcTimelineDemoComponent {
                 {
                     x: "Secretary of State",
                     y: [
-                        -5327725144000,
-                        -5322800344000
+                        5327725144000,
+                        5322800344000
                     ],
                 }
             ]
@@ -231,8 +231,8 @@ export class UtcTimelineDemoComponent {
                 {
                     x: "Secretary of State",
                     y: [
-                        -5322713944000,
-                        -5075437144000
+                        5322713944000,
+                        5075437144000
                     ],
                 }
             ]
@@ -339,8 +339,8 @@ export class UtcTimelineDemoComponent {
       },
     };
     setTimeout(() => {
-      // console.log(JSON.stringify(this.chartOptions));
-      console.log(this.chartOptions);
+      console.log(JSON.stringify(this.chartOptions));
+      // console.log(this.chartOptions);
     }, 500);
   }
 }
