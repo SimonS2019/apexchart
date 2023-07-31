@@ -1,3 +1,4 @@
+
 import { Component, ViewChild } from "@angular/core";
 import * as moment from "moment";
 
@@ -21,11 +22,11 @@ export type ChartOptions = {
 };
 
 @Component({
-  selector: 'app-multi-series',
-  templateUrl: './multi-series.component.html',
-  styleUrls: ['./multi-series.component.css']
+  selector: 'app-onoff-timeline-demo',
+  templateUrl: './onoff-timeline-demo.component.html',
+  styleUrls: ['./onoff-timeline-demo.component.css']
 })
-export class MultiSeriesComponent {
+export class OnoffTimelineDemoComponent  {
   @ViewChild('chart', { static: false }) chart: any;
   public chartOptions: ChartOptions;
 
@@ -93,7 +94,8 @@ export class MultiSeriesComponent {
       plotOptions: {
         bar: {
           horizontal: true,
-          
+          rangeBarGroupRows: true,  //Front-end DTO. pieOptions.startAngle
+
         }
       },
       dataLabels: {
@@ -112,5 +114,9 @@ export class MultiSeriesComponent {
         position: "top"
       }
     };
+    setTimeout(() => {
+      // console.log(JSON.stringify(this.chartOptions));
+      console.log(this.chartOptions.series);
+    }, 500);
   }
 }

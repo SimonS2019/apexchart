@@ -56,6 +56,7 @@ import { DumbbellComponent } from './_timeline/dumbbell/dumbbell.component';
 import { PowerfulTimelineComponent } from './_timeline/powerful-timeline/powerful-timeline.component';
 import { LuaExampleComponent } from './_timeline/_timeline/lua-example/lua-example.component';
 import { UtcTimelineDemoComponent } from './_timeline/utc-timeline-demo/utc-timeline-demo.component';
+import { OnoffTimelineDemoComponent } from './_timeline/onoff-timeline-demo/onoff-timeline-demo.component';
 
 @NgModule({
   declarations: [
@@ -111,7 +112,8 @@ import { UtcTimelineDemoComponent } from './_timeline/utc-timeline-demo/utc-time
     DumbbellComponent,
     PowerfulTimelineComponent,
     LuaExampleComponent,
-    UtcTimelineDemoComponent
+    UtcTimelineDemoComponent,
+    OnoffTimelineDemoComponent
   ],
   imports: [
     BrowserModule,
