@@ -341,10 +341,10 @@ export class LuaExampleComponent {
         },
       },
       xaxis: {
-        type: 'datetime', // Need, but alwary "datetime" if chart is timeline
+        type: 'datetime', // Need, Lua hard code
       },
       yaxis: {
-        show: true, //Need,
+        show: true, //Front-end DTO. basicOptions.showYaxis
       },
     };
     setTimeout(() => {
