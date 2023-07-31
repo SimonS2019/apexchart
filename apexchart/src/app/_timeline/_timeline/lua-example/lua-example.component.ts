@@ -250,85 +250,64 @@ export class LuaExampleComponent {
       ],
       chart: {
         animations: {
-          enabled: true, // Need, default is true
-          speed: 800, // Need, default is 800
+          enabled: true, //Front-end DTO. basicOptions.animations
         },
-        foreColor: '#373d3f', // Need! important "foreColor" will be overridden if we assign a color to a specific property
-        sparkline: {
-          enabled: false,
-        },
+        type: 'rangeBar',  //Front-end DTO. selectedChartType (0 means timeline)
         toolbar: {
-          show: true, // Need, important!
+          show: true, //Front-end DTO. basicOptions.toolbar
           tools: {
-            download: true,
+            download: true, //Lua hard code. 
           },
-          export: {
-            csv: {
-              // Need, Important! , logic is in lua
+          export: {   //Lua ? 
+            csv: { //Lua ? 
               filename: undefined,
               columnDelimiter: ',',
               headerCategory: 'category',
               headerValue: 'value',
             },
-            svg: {
-              // Need, Important! , logic is in lua
+            svg: {  //Lua ? 
               filename: 'Test 13223',
             },
-            png: {
-              // Need, Important! , logic is in lua
+            png: { //Lua ? 
               filename: undefined,
             },
           },
           // autoSelected: 'zoom'  // No for pie / donut
         },
-        width: '100%', //Need? if need,lua to do the logical
-        type: 'rangeBar', //Need,  lua to do the logical
+        height:300  // Front-end DTO widgetContentHeight 
       },
       title: {
-        text: 'This is a Title', //Need, NB: using an empty string will take up some space (5px height?), we can use undefined
-        align: 'center', //Need, default is 'left', Possible Options: 'left', 'center', 'right'
-        floating: false, // No need, default is false, ready to use
+        text: 'This is a big Title', //Lua hard code. if dont want to show title can set = undefined;
+        align: 'center', ///Front-end DTO. basicOptions.titleAlign
         style: {
-          fontSize: '18px', //Need,
-          fontWeight: 'bold', //Need, String | Number
-          // fontFamily:  undefined, // No need,
-          color: '#263238', //Need,
+          fontSize: '18px', //LUA,hard code
         },
       },
       subtitle: {
-        text: 'This is a subtitle', //Need, NB: using an empty string will take up some space, we can use undefined
-        align: 'center', //Need, default is 'left', Possible Options: 'left', 'center', 'right'
+        text: 'This is a subtitle', //Lua hard code. if dont want to show subtitle can set = undefined;
+        align: 'center', //Front-end DTO. basicOptions.subtitleAlign
         style: {
-          fontSize: '12px',
-          fontWeight: 'normal',
-          color: '#9699a2',
+          fontSize: '12px', //LUA,hard code, 
         },
       },
       theme: {
-        mode: 'light', // Need? but automatic!  light || dark
+        mode: 'dark', // Front end DTO isDarkMode? 'light' : 'dark'
+        palette: 'palette10', //Front-end DTO. basicOptions.selectTheme
+        // we have a dropdown has 11 options 'palette1' to 'palette10' and "Same as ngx-charts", can we have a logic like :
+        //  if (basicOptions.selectTheme = "Same as ngx-charts") we use  this.chartOptions.colors to overwrite this.chartOptions.theme.palette
       },
       responsive: [],
       legend: {
-        show: true, //Need, default is true
-        position: 'right', ////Need, default is right, top, right , bottom, left
-        fontSize: '14px', //Need, default is 12px
-        width: undefined, //Need, undefined is means auto?
-        height: undefined, //Need , undefined is means auto?
+        show: true, //Front-end DTO. basicOptions.enabledLegend
+        position: 'right', //Front-end DTO. basicOptions.legendPosition
       },
       dataLabels: {
         //no Now
       },
       tooltip: {
-        enabled: true, //Need, default is true
-        followCursor: true, //Need,Pie chart does not work, Timeline is work!
-        fillSeriesColor: true, //Time line no work ?
-        theme: 'light', //Need, default is dark.
-        // Might be a good idea to go against the Apex theme?? Accepts either light or dark
-        style: {
-          fontSize: '12px', //Need, default is 12px
-        },
+        enabled: true, //Front-end DTO. basicOptions.enabledTooltip
       },
-      colors: [
+      colors: [  // Front end DTO ngxColorScheme,
         '#66DA26',
         '#00E396',
         '#FEB019',
@@ -347,38 +326,25 @@ export class LuaExampleComponent {
       ],
    
       stroke: {
-        // show: true, //No Need, default is false
       },
       states: {
       },
       grid: {
-       
       },
       fill: {
-        //For timeline chart, these properties is sucks
       },
       plotOptions: {
         bar: {
-          horizontal: true, // Need, but for timeline, it alwary true
-          barHeight: '50%', // Need
-          rangeBarGroupRows: true, //Need, default is false
+          horizontal: true, // Lua hard code
+          barHeight: '50%', //  //Front-end DTO. pieOptions.startAngle
+          rangeBarGroupRows: true,  //Front-end DTO. pieOptions.startAngle
         },
       },
       xaxis: {
         type: 'datetime', // Need, but alwary "datetime" if chart is timeline
-        categories: [], // This property is suck
-        tickAmount: undefined, // This property in Timeline not work
-        min: undefined, // This property in Timeline not work
-        max: undefined, // This property in Timeline not work
-        range: undefined, // This property in Timeline not work
-        floating: false, // This property in Timeline not work
-        decimalsInFloat: undefined, // This property in Timeline not work
-        overwriteCategories: undefined, // This property in Timeline not work
-        position: 'bottom', // No need
       },
       yaxis: {
         show: true, //Need,
-        
       },
     };
     setTimeout(() => {

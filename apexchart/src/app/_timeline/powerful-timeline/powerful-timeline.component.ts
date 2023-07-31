@@ -540,12 +540,14 @@ export class PowerfulTimelineComponent {
         enabled: true, //Need, default is true
         // enabledOnSeries: undefined, //No need
         // shared: true, //No need
-        followCursor: true, //Need,Pie chart does not work, Timeline is work!
+        followCursor: false, //Need,Pie chart does not work, Timeline is work!
+        // followCursor: true, //Need,Pie chart does not work, Timeline is work!
         // intersect: false,  // No need, Pie chart will cause some error !!
         // inverseOrder: false,  //No need
         // custom: undefined,  //No need
         fillSeriesColor: true, //Time line no work ?
-        theme: 'light', //Need, default is dark.
+        theme: 'dark', //Need, default is dark. 
+        // theme: 'light', //Need, default is dark.
         // Might be a good idea to go against the Apex theme?? Accepts either light or dark
 
         style: {
