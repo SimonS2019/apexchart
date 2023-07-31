@@ -68,6 +68,8 @@ export class LuaExampleComponent {
   public chartOptions: ChartOptions;
 
   constructor() {
+    console.log(new Date(1789, 3, 30).getTime());
+    
     this.chartOptions = {
       series: [
         // George Washington
@@ -348,7 +350,8 @@ export class LuaExampleComponent {
       },
     };
     setTimeout(() => {
-      console.log(JSON.stringify(this.chartOptions));
+      // console.log(JSON.stringify(this.chartOptions));
+      console.log(this.chartOptions.series);
     }, 500);
   }
 }

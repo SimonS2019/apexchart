@@ -55,6 +55,7 @@ import { MultipleSeriesComponent } from './_timeline/multiple-series/multiple-se
 import { DumbbellComponent } from './_timeline/dumbbell/dumbbell.component';
 import { PowerfulTimelineComponent } from './_timeline/powerful-timeline/powerful-timeline.component';
 import { LuaExampleComponent } from './_timeline/_timeline/lua-example/lua-example.component';
+import { UtcTimelineDemoComponent } from './_timeline/utc-timeline-demo/utc-timeline-demo.component';
 
 @NgModule({
   declarations: [
@@ -109,7 +110,8 @@ import { LuaExampleComponent } from './_timeline/_timeline/lua-example/lua-examp
     MultipleSeriesComponent,
     DumbbellComponent,
     PowerfulTimelineComponent,
-    LuaExampleComponent
+    LuaExampleComponent,
+    UtcTimelineDemoComponent
   ],
   imports: [
     BrowserModule,
