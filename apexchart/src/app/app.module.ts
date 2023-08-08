@@ -57,7 +57,6 @@ import { PowerfulTimelineComponent } from './_timeline/powerful-timeline/powerfu
 import { LuaExampleComponent } from './_timeline/_timeline/lua-example/lua-example.component';
 import { UtcTimelineDemoComponent } from './_timeline/utc-timeline-demo/utc-timeline-demo.component';
 import { OnoffTimelineDemoComponent } from './_timeline/onoff-timeline-demo/onoff-timeline-demo.component';
-import { BaiscComponent } from './_column/baisc/baisc.component';
 import { ColumnWithDataLabelsComponent } from './_column/column-with-data-labels/column-with-data-labels.component';
 import { StackedColumnsComponent } from './_column/stacked-columns/stacked-columns.component';
 import { StackedColumns100Component } from './_column/stacked-columns100/stacked-columns100.component';
@@ -69,6 +68,7 @@ import { ColumnsWithNegativeValuesComponent } from './_column/columns-with-negat
 import { DynamicLoaedChartComponent } from './_column/dynamic-loaed-chart/dynamic-loaed-chart.component';
 import { DistributedColumnsComponent } from './_column/distributed-columns/distributed-columns.component';
 import { RangeColumnChartComponent } from './_column/range-column-chart/range-column-chart.component';
+import { BasicColumnsComponent } from './_column/basic-columns/basic-columns.component';
 
 @NgModule({
   declarations: [
@@ -126,7 +126,6 @@ import { RangeColumnChartComponent } from './_column/range-column-chart/range-co
     LuaExampleComponent,
     UtcTimelineDemoComponent,
     OnoffTimelineDemoComponent,
-    BaiscComponent,
     ColumnWithDataLabelsComponent,
     StackedColumnsComponent,
     StackedColumns100Component,
@@ -137,7 +136,8 @@ import { RangeColumnChartComponent } from './_column/range-column-chart/range-co
     ColumnsWithNegativeValuesComponent,
     DynamicLoaedChartComponent,
     DistributedColumnsComponent,
-    RangeColumnChartComponent
+    RangeColumnChartComponent,
+    BasicColumnsComponent
   ],
   imports: [
     BrowserModule,
