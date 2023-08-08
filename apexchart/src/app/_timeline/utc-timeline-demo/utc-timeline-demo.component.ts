@@ -271,21 +271,21 @@ export class UtcTimelineDemoComponent {
         height: 300, // Front-end DTO widgetContentHeight
       },
       title: {
-        text: 'This is a big Title', //Lua hard code. if dont want to show title can set = undefined;
+        text: undefined, //Lua hard code. if dont want to show title can set = undefined;
         align: 'center', ///Front-end DTO. basicOptions.titleAlign
         style: {
           fontSize: '18px', //LUA,hard code
         },
       },
       subtitle: {
-        text: 'This is a subtitle', //Lua hard code. if dont want to show subtitle can set = undefined;
+        text: undefined, //Lua hard code. if dont want to show subtitle can set = undefined;
         align: 'center', //Front-end DTO. basicOptions.subtitleAlign
         style: {
           fontSize: '12px', //LUA,hard code,
         },
       },
       theme: {
-        mode: 'dark', // Front end DTO isDarkMode? 'light' : 'dark'
+        mode: 'light', // Front end DTO isDarkMode? 'light' : 'dark'
         palette: 'palette10', //Front-end DTO. basicOptions.selectTheme
         // we have a dropdown has 11 options 'palette1' to 'palette10' and "Same as ngx-charts", can we have a logic like :
         //  if (basicOptions.selectTheme = "Same as ngx-charts") we use  this.chartOptions.colors to overwrite this.chartOptions.theme.palette
@@ -293,7 +293,7 @@ export class UtcTimelineDemoComponent {
       responsive: [],
       legend: {
         show: true, //Front-end DTO. basicOptions.enabledLegend
-        position: 'right', //Front-end DTO. basicOptions.legendPosition
+        position: 'bottom', //Front-end DTO. basicOptions.legendPosition
       },
       dataLabels: {
         //no Now

@@ -57,6 +57,18 @@ import { PowerfulTimelineComponent } from './_timeline/powerful-timeline/powerfu
 import { LuaExampleComponent } from './_timeline/_timeline/lua-example/lua-example.component';
 import { UtcTimelineDemoComponent } from './_timeline/utc-timeline-demo/utc-timeline-demo.component';
 import { OnoffTimelineDemoComponent } from './_timeline/onoff-timeline-demo/onoff-timeline-demo.component';
+import { BaiscComponent } from './_column/baisc/baisc.component';
+import { ColumnWithDataLabelsComponent } from './_column/column-with-data-labels/column-with-data-labels.component';
+import { StackedColumnsComponent } from './_column/stacked-columns/stacked-columns.component';
+import { StackedColumns100Component } from './_column/stacked-columns100/stacked-columns100.component';
+import { GroupStackedColumnsComponent } from './_column/group-stacked-columns/group-stacked-columns.component';
+import { DumbbellColumnsComponent } from './_column/dumbbell-columns/dumbbell-columns.component';
+import { ColumnsWithMarkersComponent } from './_column/columns-with-markers/columns-with-markers.component';
+import { ColumnsWithRoatedLabelsComponent } from './_column/columns-with-roated-labels/columns-with-roated-labels.component';
+import { ColumnsWithNegativeValuesComponent } from './_column/columns-with-negative-values/columns-with-negative-values.component';
+import { DynamicLoaedChartComponent } from './_column/dynamic-loaed-chart/dynamic-loaed-chart.component';
+import { DistributedColumnsComponent } from './_column/distributed-columns/distributed-columns.component';
+import { RangeColumnChartComponent } from './_column/range-column-chart/range-column-chart.component';
 
 @NgModule({
   declarations: [
@@ -113,7 +125,19 @@ import { OnoffTimelineDemoComponent } from './_timeline/onoff-timeline-demo/onof
     PowerfulTimelineComponent,
     LuaExampleComponent,
     UtcTimelineDemoComponent,
-    OnoffTimelineDemoComponent
+    OnoffTimelineDemoComponent,
+    BaiscComponent,
+    ColumnWithDataLabelsComponent,
+    StackedColumnsComponent,
+    StackedColumns100Component,
+    GroupStackedColumnsComponent,
+    DumbbellColumnsComponent,
+    ColumnsWithMarkersComponent,
+    ColumnsWithRoatedLabelsComponent,
+    ColumnsWithNegativeValuesComponent,
+    DynamicLoaedChartComponent,
+    DistributedColumnsComponent,
+    RangeColumnChartComponent
   ],
   imports: [
     BrowserModule,

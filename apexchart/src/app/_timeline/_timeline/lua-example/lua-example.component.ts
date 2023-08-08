@@ -293,7 +293,7 @@ export class LuaExampleComponent {
         },
       },
       theme: {
-        mode: 'dark', // Front end DTO isDarkMode? 'light' : 'dark'
+        mode: 'light', // Front end DTO isDarkMode? 'light' : 'dark'
         palette: 'palette10', //Front-end DTO. basicOptions.selectTheme
         // we have a dropdown has 11 options 'palette1' to 'palette10' and "Same as ngx-charts", can we have a logic like :
         //  if (basicOptions.selectTheme = "Same as ngx-charts") we use  this.chartOptions.colors to overwrite this.chartOptions.theme.palette
