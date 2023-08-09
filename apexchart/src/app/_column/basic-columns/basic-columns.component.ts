@@ -60,7 +60,7 @@ export class BasicColumnsComponent {
         bar: {
           horizontal: false,
           columnWidth: "55%",
-          // endingShape: "rounded"
+          // endingShape: "rounded" //this version of library not support this property
         }
       },
       dataLabels: {
