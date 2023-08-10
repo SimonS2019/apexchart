@@ -69,6 +69,8 @@ import { DynamicLoaedChartComponent } from './_column/dynamic-loaed-chart/dynami
 import { DistributedColumnsComponent } from './_column/distributed-columns/distributed-columns.component';
 import { RangeColumnChartComponent } from './_column/range-column-chart/range-column-chart.component';
 import { BasicColumnsComponent } from './_column/basic-columns/basic-columns.component';
+import { PowerfulColumnDemoComponent } from './_column/powerful-column-demo/powerful-column-demo.component';
+import { LuaColumnDemoComponent } from './_column/lua-column-demo/lua-column-demo.component';
 
 @NgModule({
   declarations: [
@@ -137,7 +139,9 @@ import { BasicColumnsComponent } from './_column/basic-columns/basic-columns.com
     DynamicLoaedChartComponent,
     DistributedColumnsComponent,
     RangeColumnChartComponent,
-    BasicColumnsComponent
+    BasicColumnsComponent,
+    PowerfulColumnDemoComponent,
+    LuaColumnDemoComponent
   ],
   imports: [
     BrowserModule,
