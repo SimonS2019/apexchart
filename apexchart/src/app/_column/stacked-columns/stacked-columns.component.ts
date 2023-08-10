@@ -36,7 +36,7 @@ export class StackedColumnsComponent {
       series: [
         {
           name: 'PRODUCT A',
-          data: [44, 55, 41, 67, 22, 43],
+          data: [47, 55, 41, 67, 22, 43],
         },
         {
           name: 'PRODUCT B',

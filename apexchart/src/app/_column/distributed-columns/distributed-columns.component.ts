@@ -86,7 +86,7 @@ export class DistributedColumnsComponent{
       },
       xaxis: {
         categories: [
-          ["John", "Doe"],
+          ["John", "Doe",],
           ["Joe", "Smith"],
           ["Jake", "Williams"],
           "Amber",
