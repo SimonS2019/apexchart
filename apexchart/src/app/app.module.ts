@@ -71,6 +71,8 @@ import { RangeColumnChartComponent } from './_column/range-column-chart/range-co
 import { BasicColumnsComponent } from './_column/basic-columns/basic-columns.component';
 import { PowerfulColumnDemoComponent } from './_column/powerful-column-demo/powerful-column-demo.component';
 import { LuaColumnDemoComponent } from './_column/lua-column-demo/lua-column-demo.component';
+import { CustomerDashboardModule } from './customer-dashboard/customer-dashboard.module';
+import { CustomerDashboard2Module } from './customer-dashboard2/customer-dashboard2.module';
 
 @NgModule({
   declarations: [
@@ -146,7 +148,9 @@ import { LuaColumnDemoComponent } from './_column/lua-column-demo/lua-column-dem
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgApexchartsModule
+    NgApexchartsModule,
+    CustomerDashboardModule,
+    CustomerDashboard2Module
   ],
   providers: [],
   bootstrap: [AppComponent]
