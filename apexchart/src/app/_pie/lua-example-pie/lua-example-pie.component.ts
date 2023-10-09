@@ -35,12 +35,13 @@ export type ChartOptions = {
   theme: ApexTheme;
   legend: ApexLegend;
   tooltip: ApexTooltip;
-  colors?: any[];
+  colors: any[];
   stroke: ApexStroke;
   states: ApexStates;
   grid: ApexGrid;
   fill: ApexFill;
   labels?: any;
+  
 
   //pie/donut chart needed as below
   responsive: ApexResponsive[];
@@ -108,7 +109,7 @@ export class LuaExamplePieComponent  {
       tooltip: {
         enabled: true, //Front-end DTO. basicOptions.enabledTooltip
       },
-      // colors: ['#A300D6', '#66DA26', '#546E7A', '#E91E63', '#FF9800'], // Front end DTO ngxColorScheme,
+      colors: ['#A300D6', '#66DA26', '#546E7A', '#E91E63', '#FF9800'], // Front end DTO ngxColorScheme,
       stroke: {},
       states: {},
       grid: {},

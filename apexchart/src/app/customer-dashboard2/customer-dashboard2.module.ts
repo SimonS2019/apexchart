@@ -12,7 +12,7 @@ import { SharedModule } from '../shared/shared.module';
   ],
   imports: [
     CommonModule,
-    // SharedModule
+    SharedModule
   ],
   exports: [
     Test2Component
