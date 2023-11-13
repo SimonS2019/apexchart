@@ -73,6 +73,16 @@ import { PowerfulColumnDemoComponent } from './_column/powerful-column-demo/powe
 import { LuaColumnDemoComponent } from './_column/lua-column-demo/lua-column-demo.component';
 import { CustomerDashboardModule } from './customer-dashboard/customer-dashboard.module';
 import { CustomerDashboard2Module } from './customer-dashboard2/customer-dashboard2.module';
+import { BasicLineChartComponent } from './_line/basic-line-chart/basic-line-chart.component';
+import { LineChartWithDatalabelsComponent } from './_line/line-chart-with-datalabels/line-chart-with-datalabels.component';
+import { ZoomableTimeseriesChartComponent } from './_line/zoomable-timeseries-chart/zoomable-timeseries-chart.component';
+import { LineChartWithAnnotationsComponent } from './_line/line-chart-with-annotations/line-chart-with-annotations.component';
+import { SyncingChartsComponent } from './_line/syncing-charts/syncing-charts.component';
+import { BrushChartComponent } from './_line/brush-chart/brush-chart.component';
+import { SteplineChartComponent } from './_line/stepline-chart/stepline-chart.component';
+import { GradientLineChartComponent } from './_line/gradient-line-chart/gradient-line-chart.component';
+import { DashedLineChartComponent } from './_line/dashed-line-chart/dashed-line-chart.component';
+import { MissingNullValuesComponent } from './_line/missing-null-values/missing-null-values.component';
 
 @NgModule({
   declarations: [
@@ -143,7 +153,17 @@ import { CustomerDashboard2Module } from './customer-dashboard2/customer-dashboa
     RangeColumnChartComponent,
     BasicColumnsComponent,
     PowerfulColumnDemoComponent,
-    LuaColumnDemoComponent
+    LuaColumnDemoComponent,
+    BasicLineChartComponent,
+    LineChartWithDatalabelsComponent,
+    ZoomableTimeseriesChartComponent,
+    LineChartWithAnnotationsComponent,
+    SyncingChartsComponent,
+    BrushChartComponent,
+    SteplineChartComponent,
+    GradientLineChartComponent,
+    DashedLineChartComponent,
+    MissingNullValuesComponent
   ],
   imports: [
     BrowserModule,
