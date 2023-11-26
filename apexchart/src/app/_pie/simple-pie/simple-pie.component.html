@@ -1,10 +1,16 @@
 <h5>simple-pie</h5>
 <!--The content below is only a placeholder and can be replaced.-->
-<div id="chart">
+<div #chart>
     <apx-chart
       [series]="chartOptions.series"
       [chart]="chartOptions.chart"
       [labels]="chartOptions.labels"
       [responsive]="chartOptions.responsive"
+      [theme]="chartOptions.theme"
+      [legend]="chartOptions.legend"
+
     ></apx-chart>
   </div>
+
+  <button (click)="testDarkMode()">  Test dark mode</button>
+  <button (click)="testLightMode()">  Test Light mode</button>
