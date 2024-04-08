@@ -83,6 +83,8 @@ import { SteplineChartComponent } from './_line/stepline-chart/stepline-chart.co
 import { GradientLineChartComponent } from './_line/gradient-line-chart/gradient-line-chart.component';
 import { DashedLineChartComponent } from './_line/dashed-line-chart/dashed-line-chart.component';
 import { MissingNullValuesComponent } from './_line/missing-null-values/missing-null-values.component';
+import { BasicLinChartWithDatetimeComponent } from './_line/basic-lin-chart-with-datetime/basic-lin-chart-with-datetime.component';
+import { BasicLinChartWithUnixtimeComponent } from './_line/basic-lin-chart-with-unixtime/basic-lin-chart-with-unixtime.component';
 
 @NgModule({
   declarations: [
@@ -163,7 +165,9 @@ import { MissingNullValuesComponent } from './_line/missing-null-values/missing-
     SteplineChartComponent,
     GradientLineChartComponent,
     DashedLineChartComponent,
-    MissingNullValuesComponent
+    MissingNullValuesComponent,
+    BasicLinChartWithDatetimeComponent,
+    BasicLinChartWithUnixtimeComponent
   ],
   imports: [
     BrowserModule,
