@@ -1,7 +1,6 @@
-<p>basic-line-chart works!</p>
 <!--The content below is only a placeholder and can be replaced.-->
-<div id="chart">
-    <apx-chart
+<div *ngIf="show " id="chart" style="background-color: antiquewhite; width: 500px;height:500px">
+    <apx-chart   style="background-color: blueviolet; display: block; height: 300px;"
       [series]="chartOptions.series"
       [chart]="chartOptions.chart"
       [xaxis]="chartOptions.xaxis"
